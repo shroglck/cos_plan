@@ -330,7 +330,7 @@
 <!-- -->
 
 
-<!-- Image carousel -->
+<!-- Analysis -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -391,120 +391,91 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">SGI Results </h2>
         <div class="content has-text-justified">
-          <p>
-          </p>
           <div class="container has-text-centered">
             <img src="static/images/w_wo_error_proposed.jpg" alt="MCQ Wrong answer" style="max-width: 50%; height: auto;">
-            <p> <b>SGI improves performance on error-free scenarios</b></p>
+            <p class="figure-caption"><b>SGI improves performance on error-free scenarios</b></p>
+            <!-- <div ><b>(a) Maze E (Navigating):</b> &rarr; denotes movement</div> -->
           </div>
-          <br><br>
-          <div>
-            <table>
-              <thead>
-                <tr>
-                  <th rowspan="2">Method</th>
-                  <th class="group-sep" colspan="3">Spatial Map</th>
-                  <th class="group-sep" colspan="3">Maze Nav</th>
-                  <th class="group-sep" colspan="3">Spatial Grid</th>
-                </tr>
-                <tr>
-                  <th>CoT</th><th>SG</th><th>SGI</th>
-                  <th>CoT</th><th>SG</th><th>SGI</th>
-                  <th>CoT</th><th>SG</th><th>SGI</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>CoG VLM</td>
-                  <td>25.1</td><td>36.7</td><td><b>35.8</b></td>
-                  <td>32.3</td><td>32.4</td><td><b>31.2</b></td>
-                  <td>30.1</td><td>34.3</td><td><b>38.2</b></td>
-                </tr>
-                <tr>
-                  <td>Janus pro 7B</td>
-                  <td>42.4</td><td>47.4</td><td>47.8</td>
-                  <td>20.8</td><td>27.3</td><td>29.3</td>
-                  <td>34.4</td><td>35.8</td><td>36.3</td>
-                </tr>
-                <tr>
-                  <td>Intern VLM</td>
-                  <td>36.3</td><td>41.3</td><td>44.3</td>
-                  <td>28.6</td><td>40.5</td><td>42.1</td>
-                  <td>33.3</td><td>33.8</td><td>35.1</td>
-                </tr>
-              </tbody>
-            <caption>
-                SGI on VQA dataset
-            </caption>
-            </table>
-            
-
-            <table>
-              <caption>
-                Table 6. SGI on PlanBench
-              </caption>
-              <thead>
-                <tr>
-                  <th>Method</th>
-                  <th>Variant</th>
-                  <th>Task 8 Score</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Qwen2 VL 8B</td>
-                  <td>Vanilla</td>
-                  <td>13.8</td>
-                </tr>
-                <tr>
-                  <td>Qwen2 VL 8B</td>
-                  <td>CoT</td>
-                  <td>14.1</td>
-                </tr>
-                <tr>
-                  <td>Qwen2 VL 8B</td>
-                  <td>SG</td>
-                  <td>13.9</td>
-                </tr>
-                <tr>
-                  <td><em>our</em></td>
-                  <td>SGI</td>
-                  <td><strong>14.7</strong></td>
-                </tr>
-              </tbody>
-            </table>
+          <br>
+          
+          <div class="figure-grid4">
+            <div class="figure-item">
+              <table class="ablation-table">
+                <thead>
+                  <tr>
+                    <th class="group-sep" rowspan="2">Method</th>
+                    <th class="group-sep" colspan="3">Spatial Map</th>
+                    <th class="group-sep" colspan="3">Maze Nav</th>
+                    <th  colspan="3">Spatial Grid</th>
+                  </tr>
+                  <tr>
+                    <th>CoT</th><th>SG</th><th class="group-sep" >SGI</th>
+                    <th>CoT</th><th>SG</th><th class="group-sep" >SGI</th>
+                    <th>CoT</th><th>SG</th><th  >SGI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="group-sep">CoG VLM</td>
+                    <td>25.1</td><td>36.7</td><td class="group-sep"> 35.8 </td>
+                    <td>32.3</td><td>32.4</td><td class="group-sep" >31.2</td>
+                    <td>30.1</td><td>34.3</td><td style="font-weight: bold; text-decoration: underline" >38.2</td>
+                  </tr>
+                  <tr>
+                    <td class="group-sep">Janus pro 7B</td>
+                    <td>42.4</td><td>47.4</td><td class="group-sep" style="font-weight: bold; text-decoration: underline" >47.8</td>
+                    <td>20.8</td><td>27.3</td><td class="group-sep" style="font-weight: bold; text-decoration: underline" >29.3</td>
+                    <td>34.4</td><td>35.8</td><td style="font-weight: bold; text-decoration: underline" >36.3</td>
+                  </tr>
+                  <tr>
+                    <td class="group-sep">Intern VLM</td>
+                    <td>36.3</td><td>41.3</td><td class="group-sep" style="font-weight: bold; text-decoration: underline">44.3</td>
+                    <td>28.6</td><td>40.5</td><td class="group-sep" style="font-weight: bold; text-decoration: underline">42.1</td>
+                    <td>33.3</td><td>33.8</td><td style="font-weight: bold; text-decoration: underline">35.1</td>
+                  </tr>
+                </tbody>
+                <caption>
+                    SGI on VQA dataset
+                </caption>
+              </table>
+            </div>
+          
+            <div class="figure-item">
+              <table class="ablation-table">
+                <caption>
+                  SGI on PlanBench for Qwen2 VL 8B
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Task 8 Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vanilla</td>
+                    <td>13.8</td>
+                  </tr>
+                  <tr>
+                    <td>CoT</td>
+                    <td>14.1</td>
+                  </tr>
+                  <tr>
+                    <td>SG</td>
+                    <td>13.9</td>
+                  </tr>
+                  <tr>
+                    <td>SGI (our) </td>
+                    <td style="font-weight: bold; text-decoration: underline">14.7</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-      <!-- <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-         <div style="display: flex; justify-content: center; align-items: center; background-color: #f5f5f5;">
-          <img src="static/images/Table3.png" alt="Main Results" style="max-width: 100%; height: auto;">
-        </div>
-        <h2 class="subtitle has-text-centered">
-          <br><b>Benchmark Results</b> <br>Performance of various VLMs (GPT-4o, InternVLM, etc.) on CoSPlan tasks. VLMs struggle with error-prone sequential planning compared to error-free settings.
-        </h2>
-      </div>
-      <div class="item">
-        <div style="display: flex; justify-content: center; align-items: center; background-color: #ffffff;">
-          <img src="static/images/Figure6.png" alt="Qualitative Results 1" style="max-width: 100%; height: auto;">
-        </div>
-        <h2 class="subtitle has-text-centered">
-          <br><b>Error Analysis</b> <br>a) VLMs excel in error-free settings but degrade with errors. b) In-context errors are harder than random ones. c) Vision-language reasoning is challenging compared to text-only.
-        </h2>
-      </div>
-      
-      <div class="item">
-        <div style="display: flex; justify-content: center; align-items: center; background-color: #ffffff;">
-          <img src="static/images/Figure9.png" alt="Qualitative Results 2" style="max-width: 100%; height: auto;">
-        </div>
-        <h2 class="subtitle has-text-centered">
-         <br><b>Error-Free Scenarios</b> <br>SGI also outperforms SG in error-free ideal scenarios, validating its robustness for general sequential planning.
-       </h2>
-      </div> -->
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
