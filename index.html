@@ -62,13 +62,13 @@
               <span class="author-block">
                 <a href="https://arxiv.org/search/cs?searchtype=author&query=Grover,+S" target="_blank">Shresth Grover</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://arxiv.org/search/cs?searchtype=author&query=Pathak,+P" target="_blank">Priyank Pathak</a><sup>1</sup>,</span>
+                  <a href="https://ppriyank.github.io/" target="_blank">Priyank Pathak</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://arxiv.org/search/cs?searchtype=author&query=Kumar,+A" target="_blank">Akash Kumar</a><sup>1</sup>,</span>
+                  <a href="https://akash2907.github.io/" target="_blank">Akash Kumar</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://arxiv.org/search/cs?searchtype=author&query=Vineet,+V" target="_blank">Vibhav Vineet</a><sup>2</sup>,</span>
+                  <a href="https://vibhav-vineet.github.io/" target="_blank">Vibhav Vineet</a><sup>2</sup>,</span>
                 <span class="author-block">
-                  <a href="https://arxiv.org/search/cs?searchtype=author&query=Rawat,+Y+S" target="_blank">Yogesh S Rawat</a><sup>1</sup></span>
+                  <a href="https://scholar.google.com/citations?user=D_JvEcwAAAAJ&hl=en" target="_blank">Yogesh S Rawat</a><sup>1</sup></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -179,7 +179,7 @@
           </p>
         </div>
         <div class="container has-text-centered">
-          <div class="figure-grid">
+          <div class="figure-grid4">
             <div class="figure-item">
               <img src="static/images/Maze-E.jpg" alt="Maze E Navigating">
               <div class="figure-caption"><b>(a) Maze E (Navigating):</b> &rarr; denotes movement</div>
@@ -187,17 +187,17 @@
 
             <div class="figure-item">
               <img src="static/images/Blocks-World-E.jpg" alt="Blocks World Rearrangement">
-              <div class="figure-caption"><b>(b) Blocks World Rearrangement:</b> X from (a) &rarr;(b) means "move box number X from column (a) to (b)"  </div>
+              <div class="figure-caption"><b>(b) Blocks World (Rearrangement):</b> X from (a) &rarr;(b) means "move box number X from column (a) to (b)"  </div>
             </div>
 
             <div class="figure-item">
               <img src="static/images/Shuffle-E.jpg" alt="Shuffle E Reconstruction">
-              <div class="figure-caption"><b>(c) Shuffle E Reconstruction:</b> &hArr; indicate swap of patches </div>
+              <div class="figure-caption"><b>(c) Shuffle E (Reconstruction):</b> &hArr; indicate swap of patches </div>
             </div>
 
             <div class="figure-item">
               <img src="static/images/Robo-VQA-E.jpg" alt="Robo VQA Reorganization">
-              <div class="figure-caption"><b>(d) Robo VQA Reorganization: </b> Real world tasks </div>
+              <div class="figure-caption"><b>(d) Robo VQA (Reorganization): </b> Real world tasks </div>
             </div>
           </div>
           <br>
@@ -214,11 +214,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3">Proposed Solution</h2>
         <div class="content has-text-justified">
           <p>
-            Addressing the limitations of current VLMs in tracking evolving scenes, we propose <b>Scene Graph Incremental updates (SGI)</b>. This novel training-free method refines Scene Graphs step-by-step for each action, generating intermediate states.
+            Addressing the limitations of current VLMs in tracking evolving scenes, we propose <b><u>S</u>cene <u>G</u>raph <u>I</u>ncremental updates (SGI)</b>. This novel <u>training-free</u> method refines Scene Graphs <u>step-by-step</u> for each action, generating intermediate states.
           </p>
+          <div class="container has-text-centered">
+            <img src="static/images/sgi.gif" style="max-width: 50%; height: auto;">
+          </div>
           <p>
             SGI consists of three main steps:
             <ol>
@@ -230,6 +233,7 @@
         </div>
         <div class="container has-text-centered">
             <img src="static/images/Figure8.png" alt="SGI Framework" style="max-width: 100%; height: auto;">
+            <h2><b>REPLACE THIS WITH GIF </b></h2>
             <p>SGI Method: 1) Initial and Goal Scene Graphs (SG) are generated. 2) Incremental Scene Update sequentially modifies SG for each action. 3) Similarity Comparison matches the resultant SG with Goal graph for searching for the best-aligned sequence.</p>
         </div>
       </div>
@@ -243,10 +247,153 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
+      <h2 class="title is-3">Analysis</h2>
+
+      <h4 class="title is-4">Why Model Give wrong Results (Generic)</h4>
+      <div class="container has-text-centered">
+        <div class="figure-grid3">
+          <div class="figure-item">
+            <img src="static/images/mcq_options_maze.jpg" alt="MCQ Wrong answer">
+            <div class="figure-caption"><b>(a) As number of MCQ option goes up accuracy falls</b></div>
+          </div>
+
+          <div class="figure-item">
+            <img src="static/images/options_bias.jpg" alt="MCQ Wrong answer">
+            <div class="figure-caption"><b>(b) Models have a strong bias towards picking option A</b></div>
+          </div>
+
+          <div class="figure-item">
+            <img src="static/images/text_multi_modal.jpg" alt="Shuffle E Reconstruction">
+            <div class="figure-caption"><b>(c) Models dont reason well with visual problems</b></div>
+          </div>            
+        </div>
+      </div>
+      <br><br>
+      <h4 class="title is-4">Why Handling Error is difficult (Ours)</h4>
+      <div class="container has-text-centered">
+        <div class="figure-grid4_2">
+          <div class="figure-item">
+            <img src="static/images/w_wo_error.jpg" alt="MCQ Wrong answer">
+            <div class="figure-caption"><b>(a) Without Error models have a higher accuracy</b></div>
+          </div>
+
+          <div class="figure-item">
+            <img src="static/images/in_context_out_context.jpg" alt="MCQ Wrong answer">
+            <div class="figure-caption"><b>(b) Error related to objects in the scene (in-context) are harder to handle</b></div>
+          </div>
+
+          <div class="figure-item">
+            <img src="static/images/k_step_context.jpg" alt="Shuffle E Reconstruction">
+            <div class="figure-caption"><b>(c) The higher the intial context (already performed actions) better the accuracy</b></div>
+          </div>            
+
+          <div class="figure-item">
+            <img src="static/images/k_step_remain.jpg" alt="Shuffle E Reconstruction">
+            <div class="figure-caption"><b>(d) Number of steps required to reach the goal. Models dont seem to take advantage of projected paths towards goal in picking up the option.</b></div>
+          </div>            
+        </div>
+      </div>
+      
+      <section class="section hero is-light">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">SGI Results </h2>
+              <div class="content has-text-justified">
+                <p>
+                </p>
+                <div class="container has-text-centered">
+                  <img src="static/images/w_wo_error_proposed.jpg" alt="MCQ Wrong answer" style="max-width: 50%; height: auto;">
+                  <p> <b>SGI improves performance on error-free scenarios</b></p>
+                </div>
+                <br><br>
+                <div>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th rowspan="2">Method</th>
+                        <th class="group-sep" colspan="3">Spatial Map</th>
+                        <th class="group-sep" colspan="3">Maze Nav</th>
+                        <th class="group-sep" colspan="3">Spatial Grid</th>
+                      </tr>
+                      <tr>
+                        <th>CoT</th><th>SG</th><th>SGI</th>
+                        <th>CoT</th><th>SG</th><th>SGI</th>
+                        <th>CoT</th><th>SG</th><th>SGI</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>CoG VLM</td>
+                        <td>25.1</td><td>36.7</td><td><b>35.8</b></td>
+                        <td>32.3</td><td>32.4</td><td><b>31.2</b></td>
+                        <td>30.1</td><td>34.3</td><td><b>38.2</b></td>
+                      </tr>
+                      <tr>
+                        <td>Janus pro 7B</td>
+                        <td>42.4</td><td>47.4</td><td>47.8</td>
+                        <td>20.8</td><td>27.3</td><td>29.3</td>
+                        <td>34.4</td><td>35.8</td><td>36.3</td>
+                      </tr>
+                      <tr>
+                        <td>Intern VLM</td>
+                        <td>36.3</td><td>41.3</td><td>44.3</td>
+                        <td>28.6</td><td>40.5</td><td>42.1</td>
+                        <td>33.3</td><td>33.8</td><td>35.1</td>
+                      </tr>
+                    </tbody>
+                  <caption>
+                      SGI on VQA dataset
+                  </caption>
+                  </table>
+                  
+
+                  <table>
+                    <caption>
+                      Table 6. SGI on PlanBench
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>Method</th>
+                        <th>Variant</th>
+                        <th>Task 8 Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Qwen2 VL 8B</td>
+                        <td>Vanilla</td>
+                        <td>13.8</td>
+                      </tr>
+                      <tr>
+                        <td>Qwen2 VL 8B</td>
+                        <td>CoT</td>
+                        <td>14.1</td>
+                      </tr>
+                      <tr>
+                        <td>Qwen2 VL 8B</td>
+                        <td>SG</td>
+                        <td>13.9</td>
+                      </tr>
+                      <tr>
+                        <td><em>our</em></td>
+                        <td>SGI</td>
+                        <td><strong>14.7</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -->
+
+      
+      
+
+      <!-- <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- Your image here -->
          <div style="display: flex; justify-content: center; align-items: center; background-color: #f5f5f5;">
           <img src="static/images/Table3.png" alt="Main Results" style="max-width: 100%; height: auto;">
         </div>
@@ -255,8 +402,7 @@
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
-        <div style="display: flex; justify-content: center; align-items: center; background-color: #f5f5f5;">
+        <div style="display: flex; justify-content: center; align-items: center; background-color: #ffffff;">
           <img src="static/images/Figure6.png" alt="Qualitative Results 1" style="max-width: 100%; height: auto;">
         </div>
         <h2 class="subtitle has-text-centered">
@@ -265,14 +411,13 @@
       </div>
       
       <div class="item">
-        <!-- Your image here -->
-        <div style="display: flex; justify-content: center; align-items: center; background-color: #f5f5f5;">
+        <div style="display: flex; justify-content: center; align-items: center; background-color: #ffffff;">
           <img src="static/images/Figure9.png" alt="Qualitative Results 2" style="max-width: 100%; height: auto;">
         </div>
         <h2 class="subtitle has-text-centered">
          <br><b>Error-Free Scenarios</b> <br>SGI also outperforms SG in error-free ideal scenarios, validating its robustness for general sequential planning.
        </h2>
-      </div>
+      </div> -->
   </div>
 </div>
 </div>
@@ -283,16 +428,15 @@
   <section class="section is-light" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>
-@misc{grover2025cosplan,
-      title={CoSPlan: Corrective Sequential Planning via Scene Graph Incremental Updates},
-      author={Shresth Grover and Priyank Pathak and Akash Kumar and Vibhav Vineet and Yogesh S Rawat},
-      year={2025},
-      eprint={2512.10342},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2512.10342},
-}
+        <pre><code>@misc{grover2025cosplan,
+        title={CoSPlan: Corrective Sequential Planning via Scene Graph Incremental Updates},
+        author={Shresth Grover and Priyank Pathak and Akash Kumar and Vibhav Vineet and Yogesh S Rawat},
+        year={2025},
+        eprint={2512.10342},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2512.10342},
+    }
 </code></pre>
     </div>
 </section>
