@@ -43,6 +43,55 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <style>
+    .ranking-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .ranking-table th, .ranking-table td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    
+    .ranking-table th {
+      background-color: #3273dc;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .ranking-table tbody tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    
+    .ranking-table tbody tr:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .ranking-table .rank-1 {
+      background-color: #ffe08a !important;
+      font-weight: bold;
+    }
+    
+    .ranking-table .rank-2 {
+      background-color: #e8e8e8 !important;
+    }
+    
+    .ranking-table .rank-3 {
+      background-color: #f5deb3 !important;
+    }
+    
+    .ranking-table caption {
+      caption-side: bottom;
+      padding: 0.75rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -124,6 +173,90 @@
 </section>
 
 
+<!-- Model Rankings Table -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Model Performance Rankings</h2>
+        <div class="content">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Model</th>
+                <th>Robo-VQA-E</th>
+                <th>Shuffle-E</th>
+                <th>Maze-E</th>
+                <th>Blocks-World-E</th>
+                <th>Average Step Completion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="rank-1">
+                <td>1</td>
+                <td>GPT-4o</td>
+                <td>48.2</td>
+                <td>52.2</td>
+                <td>45.6</td>
+                <td>49.7</td>
+                <td><strong>48.9</strong></td>
+              </tr>
+              <tr class="rank-2">
+                <td>2</td>
+                <td>Intern-VLM</td>
+                <td>23.5</td>
+                <td>25.1</td>
+                <td>35.8</td>
+                <td>21.2</td>
+                <td><strong>26.4</strong></td>
+              </tr>
+              <tr class="rank-3">
+                <td>3</td>
+                <td>CoG-VLM</td>
+                <td>13.1</td>
+                <td>23.1</td>
+                <td>25.0</td>
+                <td>25.5</td>
+                <td><strong>21.7</strong></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Qwen2-VL-8B</td>
+                <td>17.6</td>
+                <td>18.9</td>
+                <td>26.5</td>
+                <td>18.1</td>
+                <td><strong>20.3</strong></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Janus-pro-7B</td>
+                <td>14.7</td>
+                <td>21.3</td>
+                <td>20.4</td>
+                <td>24.2</td>
+                <td><strong>20.2</strong></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Random</td>
+                <td>20</td>
+                <td>20</td>
+                <td>20</td>
+                <td>20</td>
+                <td><strong>20.0</strong></td>
+              </tr>
+            </tbody>
+            <caption>Models ranked by average Step Completion accuracy across all CoSPlan tasks</caption>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -166,7 +299,7 @@
         <h2 class="title is-3">CoSPlan Benchmark</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce <b>CoSPlan (Corrective Sequence Planning)</b>, a benchmark designed to study VLMs’ planning capabilities in <u>erroneous scenarios</u>. CoSPlan focuses on <u>2D spatial vision</u> tasks guided by <u>text-based</u> instructions, requiring models to plan a <u>temporal sequence of actions</u> toward a goal (temporal), while <u>detecting and correcting</u> an erroneous action.
+            We introduce <b>CoSPlan (Corrective Sequence Planning)</b>, a benchmark designed to study VLMs' planning capabilities in <u>erroneous scenarios</u>. CoSPlan focuses on <u>2D spatial vision</u> tasks guided by <u>text-based</u> instructions, requiring models to plan a <u>temporal sequence of actions</u> toward a goal (temporal), while <u>detecting and correcting</u> an erroneous action.
           </p>
           <p>
             CoSPlan includes four diverse tasks:
