@@ -322,8 +322,7 @@ body {
 
 
 
-.ablation-table {
-      width: auto;
+.content .ablation-table {
       border-collapse: collapse;
       margin: 0rem 0;
       font-size: 0.9rem;
