@@ -214,3 +214,26 @@ body {
       font-weight: 600;
     }
   
+
+ .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+  .figure-grid img {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #ccc; */
+  }
+
+  .figure-item {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .figure-caption {
+    margin-top: 6px;
+  }    

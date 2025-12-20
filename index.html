@@ -105,12 +105,12 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="#" target="_blank"
+                  <a href="https://arxiv.org/abs/2512.10342" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv (Coming Soon)</span>
+                  <span>arXiv</span>
                 </a>
                 </span>
                 
@@ -129,8 +129,8 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <img src="static/images/Figure1.png" alt="Teaser Figure" style="max-width: 100%; height: auto;">
-        <p>Corrective Sequential Planning: Given the initial and final states, with already performed actions w/ some errors (initial context), model identifies errors in the provided context, and picks the optimal action steps to reach the final goal, correcting the error.</p>
+        <img src="static/images/overview.jpg" alt="Teaser Figure" style="max-width: 60%; height: auto;">
+        <p><strong>Corrective Sequential Planning:</strong> Given the initial and final states, with already performed actions with some errors (initial context), model identifies errors in the provided context, and picks the optimal action steps to reach the final goal, correcting the error.</p>
       </div>
     </div>
   </div>
@@ -145,7 +145,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large-scale Vision-Language Models (VLMs) exhibit impressive complex reasoning capabilities but remain largely unexplored in ‘visual sequential planning’, i.e., executing multi-step actions towards a goal. Additionally, practical sequential planning often involves non-optimal (erroneous) steps, challenging VLMs to detect and correct such steps. We propose <b>Corrective Sequential Planning Benchmark (CoSPlan)</b> to evaluate VLMs in error-prone, vision-based sequential planning tasks across 4 domains: maze navigation, block re-arrangement, image reconstruction, and object re-organization. CoSPlan assesses two key abilities: Error Detection (identifying non-optimal action) and Step Completion (correcting and completing action sequences to reach the goal). Despite using state-of-the-art reasoning techniques such as Chain-of-Thought and Scene Graphs, VLMs (e.g. Intern-VLM and Qwen2) struggle on CoSPlan, failing to leverage contextual cues to reach goals. Addressing this, we propose a novel training-free method, <b>Scene Graph Incremental updates (SGI)</b>, which introduces intermediate reasoning steps between the initial and goal states. SGI helps VLMs reason about sequences, yielding an avg. performance gain of ≃5.2%. In addition to enhancing reliability in corrective sequential planning, SGI generalizes to traditional planning tasks such as PlanBench and VQA. Code and dataset will be made public.
+            Large-scale Vision-Language Models (VLMs) exhibit impressive complex reasoning capabilities but remain largely unexplored in <em>`visual sequential planning'</em>, i.e., executing multi-step actions towards a goal. 
+            Additionally, practical sequential planning often involves non-optimal (erroneous) steps, challenging VLMs to detect and correct such steps. We propose <b>Corrective Sequential Planning Benchmark (CoSPlan)</b> to evaluate VLMs in error-prone, vision-based sequential planning tasks across 4 domains: maze navigation, block re-arrangement, image reconstruction, and object re-organization. 
+            CoSPlan assesses two key abilities: <em>Error Detection</em> (identifying non-optimal action) and <em>Step Completion</em> (correcting and completing action sequences to reach the goal). Despite using state-of-the-art reasoning techniques such as Chain-of-Thought and Scene Graphs, VLMs (e.g. Intern-VLM and Qwen2) struggle on CoSPlan, failing to leverage contextual cues to reach goals. 
+            Addressing this, we propose a novel training-free method, <b>Scene Graph Incremental updates (SGI)</b>, which introduces intermediate reasoning steps between the initial and goal states. SGI helps VLMs reason about sequences, yielding an average performance gain of ~5.2%. In addition to enhancing reliability in corrective sequential planning, SGI generalizes to traditional planning tasks such as PlanBench and VQA. Code and dataset will be made public.
           </p>
         </div>
       </div>
@@ -163,7 +166,7 @@
         <h2 class="title is-3">CoSPlan Benchmark</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce <b>CoSPlan (Corrective Sequence Planning)</b>, a benchmark designed to study VLMs’ planning capabilities in erroneous scenarios. CoSPlan focuses on 2D spatial vision tasks guided by text-based instructions, requiring models to plan a sequence of actions toward a goal (temporal), while detecting and correcting an erroneous action.
+            We introduce <b>CoSPlan (Corrective Sequence Planning)</b>, a benchmark designed to study VLMs’ planning capabilities in <u>erroneous scenarios</u>. CoSPlan focuses on <u>2D spatial vision</u> tasks guided by <u>text-based</u> instructions, requiring models to plan a <u>temporal sequence of actions</u> toward a goal (temporal), while <u>detecting and correcting</u> an erroneous action.
           </p>
           <p>
             CoSPlan includes four diverse tasks:
@@ -176,9 +179,30 @@
           </p>
         </div>
         <div class="container has-text-centered">
-            <img src="static/images/Figure2.png" alt="CoSPlan Benchmark Examples" style="max-width: 100%; height: auto;">
-            <p>Overview of CoSPlan Benchmark Datasets: Maze-E, Blocks-World-E, Shuffle-E, and Robo-VQA-E.</p>
-        </div>
+          <div class="figure-grid">
+            <div class="figure-item">
+              <img src="static/images/Maze-E.jpg" alt="Maze E Navigating">
+              <div class="figure-caption"><b>(a) Maze E (Navigating):</b> &rarr; denotes movement</div>
+            </div>
+
+            <div class="figure-item">
+              <img src="static/images/Blocks-World-E.jpg" alt="Blocks World Rearrangement">
+              <div class="figure-caption"><b>(b) Blocks World Rearrangement:</b> X from (a) &rarr;(b) means "move box number X from column (a) to (b)"  </div>
+            </div>
+
+            <div class="figure-item">
+              <img src="static/images/Shuffle-E.jpg" alt="Shuffle E Reconstruction">
+              <div class="figure-caption"><b>(c) Shuffle E Reconstruction:</b> &hArr; indicate swap of patches </div>
+            </div>
+
+            <div class="figure-item">
+              <img src="static/images/Robo-VQA-E.jpg" alt="Robo VQA Reorganization">
+              <div class="figure-caption"><b>(d) Robo VQA Reorganization: </b> Real world tasks </div>
+            </div>
+          </div>
+          <br>
+          <p><b>Overview of CoSPlan Benchmark Datasets:</b> Maze-E, Blocks-World-E, Shuffle-E, and Robo-VQA-E.</p>
+        </div>         
       </div>
     </div>
   </div>
