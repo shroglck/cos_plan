@@ -187,3 +187,30 @@ body {
         opacity: 0;
     }
 }
+
+
+
+
+
+
+
+
+
+  
+.title-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+.title-container img {
+      height: 120px;
+      width: auto;
+    }
+
+.title-container h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+  
