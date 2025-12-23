@@ -332,9 +332,10 @@ body {
 .content .ablation-table td {
   padding: 8px 10px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1.5px solid #e5e5e5;
   vertical-align: middle; 
 }
+
 
 .content .ablation-table thead th {
   background-color: #363636;
