@@ -244,7 +244,8 @@
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -318,41 +319,8 @@
 </section>
 <!-- -->
 
-<!-- METHOD (SGI) -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Proposed Solution</h2>
-        <div class="content has-text-justified">
-          <p>
-            Addressing the limitations of current VLMs in tracking evolving scenes, we propose <b><u>S</u>cene <u>G</u>raph <u>I</u>ncremental updates (SGI)</b>. This novel <u>training-free</u> method refines Scene Graphs <u>step-by-step</u> for each action, generating intermediate states.
-          </p>
-          <div class="container has-text-centered">
-            <img src="static/images/sgi.gif" style="max-width: 50%; height: auto;">
-          </div>
-          <p>
-            SGI consists of three main steps:
-            <ol>
-                <li><b>Vanilla Scene Graphs (SG):</b> Generate initial and goal Scene Graphs.</li>
-                <li><b>Incremental Scene Update:</b> Simulate each action to update the Scene Graph incrementally, creating intermediate representations.</li>
-                <li><b>Similarity Comparison:</b> Compare the resulting Scene Graph with the goal Scene Graph to select the correct sequence of actions.</li>
-            </ol>
-          </p>
-        </div>
-        <div class="container has-text-centered">
-            <img src="static/images/SGI_overall.gif" alt="SGI Framework" style="max-width: 100%; height: auto;">
-            <p>SGI Method: 1) Initial and Goal Scene Graphs (SG) are generated. 2) Incremental Scene Update sequentially modifies SG for each action. 3) Similarity Comparison matches the resultant SG with Goal graph for searching for the best-aligned sequence.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- -->
-
-
 <!-- Analysis -->
-<section class="hero is-small">
+<section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Analysis</h2>
@@ -404,6 +372,41 @@
     </div>
   </div>
 </section>  
+
+
+<!-- METHOD (SGI) -->
+<section class="section hero ">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Solution : Scene Graph Incremental Update (SGI)</h2>
+        <div class="content has-text-justified">
+          <p>
+            Addressing the limitations of current VLMs in tracking evolving scenes, we propose <b><u>S</u>cene <u>G</u>raph <u>I</u>ncremental updates (SGI)</b>. This novel <u>training-free</u> method refines Scene Graphs <u>step-by-step</u> for each action, generating intermediate states.
+          </p>
+          <div class="container has-text-centered">
+            <img src="static/images/sgi.gif" style="max-width: 50%; height: auto;">
+          </div>
+          <p>
+            SGI consists of three main steps:
+            <ol>
+                <li><b>Vanilla Scene Graphs (SG):</b> Generate initial and goal Scene Graphs.</li>
+                <li><b>Incremental Scene Update:</b> Simulate each action to update the Scene Graph incrementally, creating intermediate representations.</li>
+                <li><b>Similarity Comparison:</b> Compare the resulting Scene Graph with the goal Scene Graph to select the correct sequence of actions.</li>
+            </ol>
+          </p>
+        </div>
+        <div class="container has-text-centered">
+            <img src="static/images/SGI_overall.gif" alt="SGI Framework" style="max-width: 100%; height: auto;">
+            <p>SGI Method: 1) Initial and Goal Scene Graphs (SG) are generated. 2) Incremental Scene Update sequentially modifies SG for each action. 3) Similarity Comparison matches the resultant SG with Goal graph for searching for the best-aligned sequence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- -->
+
+
 
 <!-- SGI Performance Table -->
 <section class="section hero is-light">
