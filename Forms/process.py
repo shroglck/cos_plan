@@ -50,7 +50,7 @@ for file_index in range(1,101):
                 i+=1
                 line = Lines[i].strip()
                 option = line.replace(".", "")
-                id = f"q1{option}"
+                id = f"q{file_index}{option}"
                 
                 template += f'\t\t\t<input type="radio" id="{id}" name="Q{file_index}" value="{option}">\n'
                 template += f'\t\t\t<label for="{id}"> Option {option}\n'
