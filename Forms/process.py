@@ -3,7 +3,8 @@ import os
 root='shuffle_e_final'
 template = ""
 for file_index in range(1,101):
-    if file_index in [3, 11, 22, 26, 39, 44, 58, 62, 71, 75, 88, 89, 92, 97, 99 ]:continue
+    # if file_index in [3, 11, 22, 26, 39, 44, 58, 62, 71, 75, 88, 89, 92, 97, 99 ]:continue
+    if file_index in [2, 42, 76, 84 ]:continue
     print(file_index)
     image = f"q{file_index}.png"
     q_a = f"text_q{file_index}.txt"
