@@ -1,7 +1,9 @@
 import os 
+import pandas as pd 
 
 shuffle=False 
-blockworld = True 
+blockworld = False
+accuracy_shuffle = True 
 
 if shuffle:
     root='shuffle_e_final'
@@ -147,7 +149,36 @@ if blockworld:
         f.write(template)
     
     
-
+if accuracy_shuffle:
+    df_humans = pd.read_csv('accuracy_shuffle.csv')
+    
+    root='shuffle_e_final'
+    solutions = {}
+    correct = 0 
+    total = 0 
+    for file_index in range(1,101):
+        if file_index in [2, 42, 76, 84 ]:continue
+        print(file_index)
+        q_a = f"text_q{file_index}.txt"
+        q_a = os.path.join(root, q_a)
+        with open(q_a, "r") as f:
+            Lines = f.readlines()
+            for i,e in enumerate(Lines):
+                if 'Correct Answer:' not in e:
+                    continue 
+                solutions[file_index] = e.split('Correct Answer: ')[1]
+                answer = solutions[file_index] 
+            guessed = df_humans[f"Q{file_index}"].dropna()
+            correct += (guessed == answer).sum()
+            total += len(guessed)
+    import pdb
+    pdb.set_trace()
+    print(correct, total,  correct / total)
+            
+            
+    
+                            
+    
 
 # cd cos_plan/Forms/
 # python process.py            
