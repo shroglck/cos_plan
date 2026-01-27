@@ -3987,18 +3987,35 @@
 
 	document.addEventListener("DOMContentLoaded", () => {
     const questions = Array.from(document.querySelectorAll(".question"))
+	
+
+	function selectRandomNumbers(count, min, max) {
+		const numbers = [];
+		for (let i = 0; i < count; i++) {
+			const newRandomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+			numbers.push(newRandomInt);
+		}
+		return numbers;
+	}
+
+	
+	const q_numbers = selectRandomNumbers(4, 0, questions.length );
+	console.log(q_numbers, questions.length, );
+	q_numbers.forEach(i => console.log(questions[i].children[0].children[0].src.split('/').slice(-1)[0]  ));
+	
 
     // Shuffle questions
-    for (let i = questions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
-        ;[questions[i], questions[j]] = [questions[j], questions[i]]
-    }
+    // for (let i = questions.length - 1; i > 0; i--) {
+    //     const j = Math.floor(Math.random() * (i + 1))
+    //     ;[questions[i], questions[j]] = [questions[j], questions[i]]
+    // }
 
     // Hide all questions
     questions.forEach(q => q.style.display = "none")
 
     // Show only first 3
-    questions.slice(0, 3).forEach(q => q.style.display = "block")
+    // questions.slice(0, 3).forEach(q => q.style.display = "block")
+	q_numbers.forEach(i => questions[i].style.display = "block")
 	})
 
 </script>
