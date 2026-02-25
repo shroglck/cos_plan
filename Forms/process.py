@@ -4,10 +4,10 @@ import pandas as pd
 shuffle=False 
 blockworld = False
 
-blockworld_all = False       
-shuffle_all = False       
+blockworld_all = False         
+shuffle_all = False         
 robo_all = False   
-maze_all = True    
+maze_all = True      
   
 
 accuracy_shuffle = False
@@ -230,8 +230,8 @@ if maze_all:
                 <img src='paths_correct/{image}' style="width: 40%;">
                 <p style="font-style: italic;">(Q4: {file_index} / {option_counter}) Green needs to reach blue dot <br>
                 Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-                Green dot <strong>can not</strong> bypass red dots 
-                <br>
+                Green dot <strong>can not</strong> bypass red dots <br>
+                <strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
                 </p>
                 <p class="already_done">Green dot will be moved as follows</p>
                 <ul>"""
@@ -324,7 +324,7 @@ if blockworld_all:
             <div>
                 <img src='blockworld_e_final/{image}' style="width: 100%;">
                 <p style="font-style: italic;">(Q1: {file_index}) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-				Block uniquely identified by its ID and column (x axis).  <br>
+				Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
                 Blocks can only be moved if there are no blocks above them <br>
                 Blocks must be placed either on an empty column or on top of another block<br>
                 Some steps may be wrong / infeasible 
@@ -405,7 +405,9 @@ if shuffle_all:
                 <div >
                     <img src='shuffle_e_final/{image}' style="width: 100%;">
                     <p style="font-style: italic;"> (Q2: {file_index}) Swap patches on the left to generate image on the right. <br>
-                    Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+                    Patches identified by its 0-indexed Row and Column. 
+                    For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+                    (0,0) top left &  2,2 is bottom right  <br>
                     </p>
                     <p class="already_done">Patches that will be swapped on image of the left</p>
                     <ul>

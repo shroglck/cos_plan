@@ -28,7 +28,7 @@
 			width: 100%;
 			opacity: 0;
 			margin: 0; /* Removed default paragraph margin */
-			animation: blink 4s linear infinite;
+			animation: blink 4.8s linear infinite;
 		}
 
 		.blink2 {
@@ -50,6 +50,7 @@
 		.blink:nth-child(3) { animation-delay: 1.6s; }
 		.blink:nth-child(4) { animation-delay: 2.4s; }
 		.blink:nth-child(5) { animation-delay: 3.2s; } 
+		.blink:nth-child(6) { animation-delay: 4s; } 
 
 		/* 3. The Animation: Adjusted to prevent messy text overlap */
 		@keyframes blink { 
@@ -85,11 +86,12 @@
       Each patch is referred to by its row and column. For example, (0,0) refers to the patch in row 0, column 0, i.e. top-left patch is labelled as (0,0). Bottom right is (2,2).
 
 	  <!-- <p class="blink">PLEASE WAIT FOR FEW SECS FOR THE ANSERS TO UPLOAD TO SERVER </p> -->
-	   <p class="blink2">Please wait after clicking submit & Submit as many as you can (need not complete all 4)</p>
+	   <p class="blink2">Please wait after clicking submit & Submit as many as you can (need not complete all 4). <strong>Refresh for easier / newer problems</strong></p>
 
       <strong>Competitors:</strong> <br>
 	  <div class="text-container">
         <p class="blink">GPT-4o</p>
+		<p class="blink">Gemini</p> 
         <p class="blink">Intern-VLM</p>
         <p class="blink">CoG-VLM</p>
         <p class="blink">Janus-pro-7B</p>
@@ -111,7 +113,7 @@
 				<div>
 					<img src='blockworld_e_final/q1.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 1) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -163,7 +165,7 @@
 				<div>
 					<img src='blockworld_e_final/q2.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 2) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -215,7 +217,7 @@
 				<div>
 					<img src='blockworld_e_final/q3.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 3) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -267,7 +269,7 @@
 				<div>
 					<img src='blockworld_e_final/q4.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 4) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -319,7 +321,7 @@
 				<div>
 					<img src='blockworld_e_final/q5.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 5) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -371,7 +373,7 @@
 				<div>
 					<img src='blockworld_e_final/q6.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 6) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -423,7 +425,7 @@
 				<div>
 					<img src='blockworld_e_final/q7.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 7) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -475,7 +477,7 @@
 				<div>
 					<img src='blockworld_e_final/q8.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 8) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -527,7 +529,7 @@
 				<div>
 					<img src='blockworld_e_final/q9.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 9) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -579,7 +581,7 @@
 				<div>
 					<img src='blockworld_e_final/q10.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 10) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -631,7 +633,7 @@
 				<div>
 					<img src='blockworld_e_final/q11.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 11) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -683,7 +685,7 @@
 				<div>
 					<img src='blockworld_e_final/q12.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 12) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -735,7 +737,7 @@
 				<div>
 					<img src='blockworld_e_final/q13.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 13) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -787,7 +789,7 @@
 				<div>
 					<img src='blockworld_e_final/q14.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 14) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -839,7 +841,7 @@
 				<div>
 					<img src='blockworld_e_final/q15.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 15) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -891,7 +893,7 @@
 				<div>
 					<img src='blockworld_e_final/q16.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 16) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -943,7 +945,7 @@
 				<div>
 					<img src='blockworld_e_final/q17.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 17) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -995,7 +997,7 @@
 				<div>
 					<img src='blockworld_e_final/q18.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 18) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1047,7 +1049,7 @@
 				<div>
 					<img src='blockworld_e_final/q19.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 19) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1099,7 +1101,7 @@
 				<div>
 					<img src='blockworld_e_final/q20.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 20) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1151,7 +1153,7 @@
 				<div>
 					<img src='blockworld_e_final/q21.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 21) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1203,7 +1205,7 @@
 				<div>
 					<img src='blockworld_e_final/q22.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 22) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1255,7 +1257,7 @@
 				<div>
 					<img src='blockworld_e_final/q23.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 23) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1307,7 +1309,7 @@
 				<div>
 					<img src='blockworld_e_final/q24.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 24) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1359,7 +1361,7 @@
 				<div>
 					<img src='blockworld_e_final/q25.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 25) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1411,7 +1413,7 @@
 				<div>
 					<img src='blockworld_e_final/q26.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 26) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1463,7 +1465,7 @@
 				<div>
 					<img src='blockworld_e_final/q27.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 27) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1515,7 +1517,7 @@
 				<div>
 					<img src='blockworld_e_final/q28.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 28) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1567,7 +1569,7 @@
 				<div>
 					<img src='blockworld_e_final/q29.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 29) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1619,7 +1621,7 @@
 				<div>
 					<img src='blockworld_e_final/q30.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 30) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1671,7 +1673,7 @@
 				<div>
 					<img src='blockworld_e_final/q31.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 31) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1723,7 +1725,7 @@
 				<div>
 					<img src='blockworld_e_final/q32.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 32) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1775,7 +1777,7 @@
 				<div>
 					<img src='blockworld_e_final/q33.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 33) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1827,7 +1829,7 @@
 				<div>
 					<img src='blockworld_e_final/q34.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 34) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1879,7 +1881,7 @@
 				<div>
 					<img src='blockworld_e_final/q35.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 35) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1931,7 +1933,7 @@
 				<div>
 					<img src='blockworld_e_final/q36.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 36) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -1983,7 +1985,7 @@
 				<div>
 					<img src='blockworld_e_final/q37.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 37) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2035,7 +2037,7 @@
 				<div>
 					<img src='blockworld_e_final/q38.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 38) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2087,7 +2089,7 @@
 				<div>
 					<img src='blockworld_e_final/q39.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 39) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2139,7 +2141,7 @@
 				<div>
 					<img src='blockworld_e_final/q40.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 40) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2191,7 +2193,7 @@
 				<div>
 					<img src='blockworld_e_final/q41.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 41) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2243,7 +2245,7 @@
 				<div>
 					<img src='blockworld_e_final/q42.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 42) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2295,7 +2297,7 @@
 				<div>
 					<img src='blockworld_e_final/q43.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 43) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2347,7 +2349,7 @@
 				<div>
 					<img src='blockworld_e_final/q44.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 44) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2399,7 +2401,7 @@
 				<div>
 					<img src='blockworld_e_final/q45.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 45) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2451,7 +2453,7 @@
 				<div>
 					<img src='blockworld_e_final/q46.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 46) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2503,7 +2505,7 @@
 				<div>
 					<img src='blockworld_e_final/q47.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 47) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2555,7 +2557,7 @@
 				<div>
 					<img src='blockworld_e_final/q48.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 48) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2607,7 +2609,7 @@
 				<div>
 					<img src='blockworld_e_final/q49.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 49) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2659,7 +2661,7 @@
 				<div>
 					<img src='blockworld_e_final/q50.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 50) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2711,7 +2713,7 @@
 				<div>
 					<img src='blockworld_e_final/q51.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 51) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2763,7 +2765,7 @@
 				<div>
 					<img src='blockworld_e_final/q52.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 52) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2815,7 +2817,7 @@
 				<div>
 					<img src='blockworld_e_final/q53.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 53) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2867,7 +2869,7 @@
 				<div>
 					<img src='blockworld_e_final/q54.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 54) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2919,7 +2921,7 @@
 				<div>
 					<img src='blockworld_e_final/q55.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 55) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -2971,7 +2973,7 @@
 				<div>
 					<img src='blockworld_e_final/q56.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 56) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3023,7 +3025,7 @@
 				<div>
 					<img src='blockworld_e_final/q57.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 57) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3075,7 +3077,7 @@
 				<div>
 					<img src='blockworld_e_final/q58.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 58) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3127,7 +3129,7 @@
 				<div>
 					<img src='blockworld_e_final/q59.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 59) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3179,7 +3181,7 @@
 				<div>
 					<img src='blockworld_e_final/q60.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 60) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3231,7 +3233,7 @@
 				<div>
 					<img src='blockworld_e_final/q61.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 61) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3283,7 +3285,7 @@
 				<div>
 					<img src='blockworld_e_final/q62.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 62) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3335,7 +3337,7 @@
 				<div>
 					<img src='blockworld_e_final/q63.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 63) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3387,7 +3389,7 @@
 				<div>
 					<img src='blockworld_e_final/q64.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 64) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3439,7 +3441,7 @@
 				<div>
 					<img src='blockworld_e_final/q65.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 65) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3491,7 +3493,7 @@
 				<div>
 					<img src='blockworld_e_final/q66.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 66) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3543,7 +3545,7 @@
 				<div>
 					<img src='blockworld_e_final/q67.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 67) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3595,7 +3597,7 @@
 				<div>
 					<img src='blockworld_e_final/q68.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 68) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3647,7 +3649,7 @@
 				<div>
 					<img src='blockworld_e_final/q69.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 69) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3699,7 +3701,7 @@
 				<div>
 					<img src='blockworld_e_final/q70.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 70) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3751,7 +3753,7 @@
 				<div>
 					<img src='blockworld_e_final/q71.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 71) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3803,7 +3805,7 @@
 				<div>
 					<img src='blockworld_e_final/q72.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 72) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3855,7 +3857,7 @@
 				<div>
 					<img src='blockworld_e_final/q73.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 73) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3907,7 +3909,7 @@
 				<div>
 					<img src='blockworld_e_final/q74.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 74) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -3959,7 +3961,7 @@
 				<div>
 					<img src='blockworld_e_final/q75.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 75) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4011,7 +4013,7 @@
 				<div>
 					<img src='blockworld_e_final/q76.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 76) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4063,7 +4065,7 @@
 				<div>
 					<img src='blockworld_e_final/q77.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 77) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4115,7 +4117,7 @@
 				<div>
 					<img src='blockworld_e_final/q78.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 78) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4167,7 +4169,7 @@
 				<div>
 					<img src='blockworld_e_final/q79.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 79) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4219,7 +4221,7 @@
 				<div>
 					<img src='blockworld_e_final/q80.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 80) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4271,7 +4273,7 @@
 				<div>
 					<img src='blockworld_e_final/q81.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 81) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4323,7 +4325,7 @@
 				<div>
 					<img src='blockworld_e_final/q82.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 82) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4375,7 +4377,7 @@
 				<div>
 					<img src='blockworld_e_final/q83.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 83) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4427,7 +4429,7 @@
 				<div>
 					<img src='blockworld_e_final/q84.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 84) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4479,7 +4481,7 @@
 				<div>
 					<img src='blockworld_e_final/q85.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 85) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4531,7 +4533,7 @@
 				<div>
 					<img src='blockworld_e_final/q86.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 86) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4583,7 +4585,7 @@
 				<div>
 					<img src='blockworld_e_final/q87.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 87) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4635,7 +4637,7 @@
 				<div>
 					<img src='blockworld_e_final/q88.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 88) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4687,7 +4689,7 @@
 				<div>
 					<img src='blockworld_e_final/q89.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 89) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4739,7 +4741,7 @@
 				<div>
 					<img src='blockworld_e_final/q90.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 90) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4791,7 +4793,7 @@
 				<div>
 					<img src='blockworld_e_final/q91.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 91) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4843,7 +4845,7 @@
 				<div>
 					<img src='blockworld_e_final/q92.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 92) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4895,7 +4897,7 @@
 				<div>
 					<img src='blockworld_e_final/q93.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 93) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4947,7 +4949,7 @@
 				<div>
 					<img src='blockworld_e_final/q94.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 94) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -4999,7 +5001,7 @@
 				<div>
 					<img src='blockworld_e_final/q95.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 95) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -5051,7 +5053,7 @@
 				<div>
 					<img src='blockworld_e_final/q96.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 96) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -5103,7 +5105,7 @@
 				<div>
 					<img src='blockworld_e_final/q97.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 97) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -5155,7 +5157,7 @@
 				<div>
 					<img src='blockworld_e_final/q98.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 98) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -5207,7 +5209,7 @@
 				<div>
 					<img src='blockworld_e_final/q99.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 99) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -5259,7 +5261,7 @@
 				<div>
 					<img src='blockworld_e_final/q100.png' style="width: 100%;">
 					<p style="font-style: italic;">(Q1: 100) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
-					Block uniquely identified by its ID and column (x axis).  <br>
+					Block uniquely identified by its ID and 0-indexed column (x axis, 0,1,2,3,4).  <br>
 					Blocks can only be moved if there are no blocks above them <br>
 					Blocks must be placed either on an empty column or on top of another block<br>
 					Some steps may be wrong / infeasible 
@@ -5317,7 +5319,9 @@
 					<div >
 						<img src='shuffle_e_final/q1.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 1) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5363,7 +5367,9 @@
 					<div >
 						<img src='shuffle_e_final/q3.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 3) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5403,7 +5409,9 @@
 					<div >
 						<img src='shuffle_e_final/q4.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 4) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5449,7 +5457,9 @@
 					<div >
 						<img src='shuffle_e_final/q5.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 5) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5495,7 +5505,9 @@
 					<div >
 						<img src='shuffle_e_final/q6.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 6) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5538,7 +5550,9 @@
 					<div >
 						<img src='shuffle_e_final/q7.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 7) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5581,7 +5595,9 @@
 					<div >
 						<img src='shuffle_e_final/q8.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 8) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5624,7 +5640,9 @@
 					<div >
 						<img src='shuffle_e_final/q9.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 9) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5670,7 +5688,9 @@
 					<div >
 						<img src='shuffle_e_final/q10.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 10) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5716,7 +5736,9 @@
 					<div >
 						<img src='shuffle_e_final/q11.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 11) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5762,7 +5784,9 @@
 					<div >
 						<img src='shuffle_e_final/q12.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 12) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5802,7 +5826,9 @@
 					<div >
 						<img src='shuffle_e_final/q13.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 13) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5842,7 +5868,9 @@
 					<div >
 						<img src='shuffle_e_final/q14.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 14) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5888,7 +5916,9 @@
 					<div >
 						<img src='shuffle_e_final/q15.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 15) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5934,7 +5964,9 @@
 					<div >
 						<img src='shuffle_e_final/q16.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 16) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -5980,7 +6012,9 @@
 					<div >
 						<img src='shuffle_e_final/q17.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 17) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6026,7 +6060,9 @@
 					<div >
 						<img src='shuffle_e_final/q18.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 18) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6069,7 +6105,9 @@
 					<div >
 						<img src='shuffle_e_final/q19.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 19) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6112,7 +6150,9 @@
 					<div >
 						<img src='shuffle_e_final/q20.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 20) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6158,7 +6198,9 @@
 					<div >
 						<img src='shuffle_e_final/q21.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 21) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6201,7 +6243,9 @@
 					<div >
 						<img src='shuffle_e_final/q22.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 22) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6244,7 +6288,9 @@
 					<div >
 						<img src='shuffle_e_final/q23.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 23) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6290,7 +6336,9 @@
 					<div >
 						<img src='shuffle_e_final/q24.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 24) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6333,7 +6381,9 @@
 					<div >
 						<img src='shuffle_e_final/q25.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 25) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6376,7 +6426,9 @@
 					<div >
 						<img src='shuffle_e_final/q26.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 26) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6416,7 +6468,9 @@
 					<div >
 						<img src='shuffle_e_final/q27.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 27) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6459,7 +6513,9 @@
 					<div >
 						<img src='shuffle_e_final/q28.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 28) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6499,7 +6555,9 @@
 					<div >
 						<img src='shuffle_e_final/q29.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 29) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6545,7 +6603,9 @@
 					<div >
 						<img src='shuffle_e_final/q30.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 30) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6588,7 +6648,9 @@
 					<div >
 						<img src='shuffle_e_final/q31.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 31) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6631,7 +6693,9 @@
 					<div >
 						<img src='shuffle_e_final/q32.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 32) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6671,7 +6735,9 @@
 					<div >
 						<img src='shuffle_e_final/q33.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 33) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6714,7 +6780,9 @@
 					<div >
 						<img src='shuffle_e_final/q34.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 34) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6760,7 +6828,9 @@
 					<div >
 						<img src='shuffle_e_final/q35.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 35) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6803,7 +6873,9 @@
 					<div >
 						<img src='shuffle_e_final/q36.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 36) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6849,7 +6921,9 @@
 					<div >
 						<img src='shuffle_e_final/q37.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 37) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6892,7 +6966,9 @@
 					<div >
 						<img src='shuffle_e_final/q38.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 38) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6935,7 +7011,9 @@
 					<div >
 						<img src='shuffle_e_final/q39.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 39) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -6978,7 +7056,9 @@
 					<div >
 						<img src='shuffle_e_final/q40.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 40) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7024,7 +7104,9 @@
 					<div >
 						<img src='shuffle_e_final/q41.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 41) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7070,7 +7152,9 @@
 					<div >
 						<img src='shuffle_e_final/q43.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 43) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7113,7 +7197,9 @@
 					<div >
 						<img src='shuffle_e_final/q44.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 44) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7156,7 +7242,9 @@
 					<div >
 						<img src='shuffle_e_final/q45.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 45) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7196,7 +7284,9 @@
 					<div >
 						<img src='shuffle_e_final/q46.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 46) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7242,7 +7332,9 @@
 					<div >
 						<img src='shuffle_e_final/q47.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 47) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7285,7 +7377,9 @@
 					<div >
 						<img src='shuffle_e_final/q48.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 48) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7325,7 +7419,9 @@
 					<div >
 						<img src='shuffle_e_final/q49.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 49) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7371,7 +7467,9 @@
 					<div >
 						<img src='shuffle_e_final/q50.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 50) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7414,7 +7512,9 @@
 					<div >
 						<img src='shuffle_e_final/q51.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 51) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7454,7 +7554,9 @@
 					<div >
 						<img src='shuffle_e_final/q52.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 52) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7497,7 +7599,9 @@
 					<div >
 						<img src='shuffle_e_final/q53.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 53) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7540,7 +7644,9 @@
 					<div >
 						<img src='shuffle_e_final/q54.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 54) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7583,7 +7689,9 @@
 					<div >
 						<img src='shuffle_e_final/q55.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 55) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7626,7 +7734,9 @@
 					<div >
 						<img src='shuffle_e_final/q56.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 56) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7666,7 +7776,9 @@
 					<div >
 						<img src='shuffle_e_final/q57.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 57) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7709,7 +7821,9 @@
 					<div >
 						<img src='shuffle_e_final/q58.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 58) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7752,7 +7866,9 @@
 					<div >
 						<img src='shuffle_e_final/q59.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 59) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7795,7 +7911,9 @@
 					<div >
 						<img src='shuffle_e_final/q60.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 60) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7838,7 +7956,9 @@
 					<div >
 						<img src='shuffle_e_final/q61.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 61) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7881,7 +8001,9 @@
 					<div >
 						<img src='shuffle_e_final/q62.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 62) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7921,7 +8043,9 @@
 					<div >
 						<img src='shuffle_e_final/q63.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 63) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -7964,7 +8088,9 @@
 					<div >
 						<img src='shuffle_e_final/q64.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 64) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8007,7 +8133,9 @@
 					<div >
 						<img src='shuffle_e_final/q65.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 65) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8053,7 +8181,9 @@
 					<div >
 						<img src='shuffle_e_final/q66.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 66) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8096,7 +8226,9 @@
 					<div >
 						<img src='shuffle_e_final/q67.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 67) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8142,7 +8274,9 @@
 					<div >
 						<img src='shuffle_e_final/q68.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 68) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8182,7 +8316,9 @@
 					<div >
 						<img src='shuffle_e_final/q69.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 69) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8225,7 +8361,9 @@
 					<div >
 						<img src='shuffle_e_final/q70.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 70) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8265,7 +8403,9 @@
 					<div >
 						<img src='shuffle_e_final/q71.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 71) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8308,7 +8448,9 @@
 					<div >
 						<img src='shuffle_e_final/q72.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 72) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8351,7 +8493,9 @@
 					<div >
 						<img src='shuffle_e_final/q73.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 73) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8391,7 +8535,9 @@
 					<div >
 						<img src='shuffle_e_final/q74.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 74) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8437,7 +8583,9 @@
 					<div >
 						<img src='shuffle_e_final/q75.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 75) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8480,7 +8628,9 @@
 					<div >
 						<img src='shuffle_e_final/q77.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 77) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8523,7 +8673,9 @@
 					<div >
 						<img src='shuffle_e_final/q78.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 78) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8563,7 +8715,9 @@
 					<div >
 						<img src='shuffle_e_final/q79.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 79) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8606,7 +8760,9 @@
 					<div >
 						<img src='shuffle_e_final/q80.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 80) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8652,7 +8808,9 @@
 					<div >
 						<img src='shuffle_e_final/q81.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 81) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8695,7 +8853,9 @@
 					<div >
 						<img src='shuffle_e_final/q82.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 82) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8738,7 +8898,9 @@
 					<div >
 						<img src='shuffle_e_final/q83.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 83) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8784,7 +8946,9 @@
 					<div >
 						<img src='shuffle_e_final/q85.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 85) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8830,7 +8994,9 @@
 					<div >
 						<img src='shuffle_e_final/q86.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 86) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8876,7 +9042,9 @@
 					<div >
 						<img src='shuffle_e_final/q87.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 87) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8919,7 +9087,9 @@
 					<div >
 						<img src='shuffle_e_final/q88.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 88) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -8959,7 +9129,9 @@
 					<div >
 						<img src='shuffle_e_final/q89.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 89) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9005,7 +9177,9 @@
 					<div >
 						<img src='shuffle_e_final/q90.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 90) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9048,7 +9222,9 @@
 					<div >
 						<img src='shuffle_e_final/q91.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 91) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9091,7 +9267,9 @@
 					<div >
 						<img src='shuffle_e_final/q92.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 92) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9134,7 +9312,9 @@
 					<div >
 						<img src='shuffle_e_final/q93.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 93) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9174,7 +9354,9 @@
 					<div >
 						<img src='shuffle_e_final/q94.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 94) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9220,7 +9402,9 @@
 					<div >
 						<img src='shuffle_e_final/q95.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 95) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9263,7 +9447,9 @@
 					<div >
 						<img src='shuffle_e_final/q96.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 96) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9306,7 +9492,9 @@
 					<div >
 						<img src='shuffle_e_final/q97.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 97) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9346,7 +9534,9 @@
 					<div >
 						<img src='shuffle_e_final/q98.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 98) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9389,7 +9579,9 @@
 					<div >
 						<img src='shuffle_e_final/q99.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 99) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -9432,7 +9624,9 @@
 					<div >
 						<img src='shuffle_e_final/q100.png' style="width: 100%;">
 						<p style="font-style: italic;"> (Q2: 100) Swap patches on the left to generate image on the right. <br>
-						Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+						Patches identified by its 0-indexed Row and Column. 
+						For example, (0,2) is the top right on 0th row & 2nd column (columns are also 0,1,2) <br>
+						(0,0) top left &  2,2 is bottom right  <br>
 						</p>
 						<p class="already_done">Patches that will be swapped on image of the left</p>
 						<ul>
@@ -13440,8 +13634,8 @@
 					<img src='paths_correct/q1.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 1 / 1) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13490,8 +13684,8 @@
 					<img src='paths_correct/q2.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 2 / 2) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13542,8 +13736,8 @@
 					<img src='paths_correct/q14.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 14 / 3) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13589,8 +13783,8 @@
 					<img src='paths_correct/q16.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 16 / 4) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13641,8 +13835,8 @@
 					<img src='paths_correct/q24.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 24 / 5) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13693,8 +13887,8 @@
 					<img src='paths_correct/q29.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 29 / 6) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13743,8 +13937,8 @@
 					<img src='paths_correct/q31.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 31 / 7) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13793,8 +13987,8 @@
 					<img src='paths_correct/q32.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 32 / 8) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13843,8 +14037,8 @@
 					<img src='paths_correct/q36.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 36 / 9) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13886,8 +14080,8 @@
 					<img src='paths_correct/q38.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 38 / 10) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13933,8 +14127,8 @@
 					<img src='paths_correct/q41.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 41 / 11) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -13974,8 +14168,8 @@
 					<img src='paths_correct/q47.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 47 / 12) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14025,8 +14219,8 @@
 					<img src='paths_correct/q50.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 50 / 13) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14080,8 +14274,8 @@
 					<img src='paths_correct/q52.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 52 / 14) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14127,8 +14321,8 @@
 					<img src='paths_correct/q54.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 54 / 15) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14177,8 +14371,8 @@
 					<img src='paths_correct/q55.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 55 / 16) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14223,8 +14417,8 @@
 					<img src='paths_correct/q58.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 58 / 17) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14274,8 +14468,8 @@
 					<img src='paths_correct/q62.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 62 / 18) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14323,8 +14517,8 @@
 					<img src='paths_correct/q73.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 73 / 19) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14381,8 +14575,8 @@
 					<img src='paths_correct/q74.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 74 / 20) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14434,8 +14628,8 @@
 					<img src='paths_correct/q75.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 75 / 21) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14485,8 +14679,8 @@
 					<img src='paths_correct/q77.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 77 / 22) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14541,8 +14735,8 @@
 					<img src='paths_correct/q79.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 79 / 23) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14592,8 +14786,8 @@
 					<img src='paths_correct/q80.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 80 / 24) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14645,8 +14839,8 @@
 					<img src='paths_correct/q84.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 84 / 25) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14698,8 +14892,8 @@
 					<img src='paths_correct/q87.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 87 / 26) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14747,8 +14941,8 @@
 					<img src='paths_correct/q90.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 90 / 27) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14804,8 +14998,8 @@
 					<img src='paths_correct/q91.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 91 / 28) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14860,8 +15054,8 @@
 					<img src='paths_correct/q98.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 98 / 29) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14919,8 +15113,8 @@
 					<img src='paths_correct/q106.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 106 / 30) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -14970,8 +15164,8 @@
 					<img src='paths_correct/q109.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 109 / 31) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15029,8 +15223,8 @@
 					<img src='paths_correct/q112.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 112 / 32) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15075,8 +15269,8 @@
 					<img src='paths_correct/q113.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 113 / 33) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15123,8 +15317,8 @@
 					<img src='paths_correct/q115.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 115 / 34) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15169,8 +15363,8 @@
 					<img src='paths_correct/q116.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 116 / 35) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15216,8 +15410,8 @@
 					<img src='paths_correct/q118.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 118 / 36) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15262,8 +15456,8 @@
 					<img src='paths_correct/q121.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 121 / 37) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15313,8 +15507,8 @@
 					<img src='paths_correct/q134.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 134 / 38) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15365,8 +15559,8 @@
 					<img src='paths_correct/q135.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 135 / 39) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15412,8 +15606,8 @@
 					<img src='paths_correct/q143.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 143 / 40) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15461,8 +15655,8 @@
 					<img src='paths_correct/q146.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 146 / 41) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15513,8 +15707,8 @@
 					<img src='paths_correct/q149.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 149 / 42) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15562,8 +15756,8 @@
 					<img src='paths_correct/q151.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 151 / 43) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15615,8 +15809,8 @@
 					<img src='paths_correct/q153.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 153 / 44) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15664,8 +15858,8 @@
 					<img src='paths_correct/q154.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 154 / 45) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15714,8 +15908,8 @@
 					<img src='paths_correct/q157.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 157 / 46) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15759,8 +15953,8 @@
 					<img src='paths_correct/q159.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 159 / 47) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15806,8 +16000,8 @@
 					<img src='paths_correct/q160.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 160 / 48) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15860,8 +16054,8 @@
 					<img src='paths_correct/q163.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 163 / 49) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15906,8 +16100,8 @@
 					<img src='paths_correct/q165.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 165 / 50) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -15953,8 +16147,8 @@
 					<img src='paths_correct/q166.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 166 / 51) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16001,8 +16195,8 @@
 					<img src='paths_correct/q168.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 168 / 52) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16048,8 +16242,8 @@
 					<img src='paths_correct/q171.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 171 / 53) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16097,8 +16291,8 @@
 					<img src='paths_correct/q180.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 180 / 54) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16145,8 +16339,8 @@
 					<img src='paths_correct/q184.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 184 / 55) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16191,8 +16385,8 @@
 					<img src='paths_correct/q186.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 186 / 56) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16243,8 +16437,8 @@
 					<img src='paths_correct/q188.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 188 / 57) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16300,8 +16494,8 @@
 					<img src='paths_correct/q193.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 193 / 58) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16349,8 +16543,8 @@
 					<img src='paths_correct/q201.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 201 / 59) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16400,8 +16594,8 @@
 					<img src='paths_correct/q205.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 205 / 60) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16455,8 +16649,8 @@
 					<img src='paths_correct/q206.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 206 / 61) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16502,8 +16696,8 @@
 					<img src='paths_correct/q211.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 211 / 62) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16553,8 +16747,8 @@
 					<img src='paths_correct/q212.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 212 / 63) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16606,8 +16800,8 @@
 					<img src='paths_correct/q214.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 214 / 64) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16657,8 +16851,8 @@
 					<img src='paths_correct/q217.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 217 / 65) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16710,8 +16904,8 @@
 					<img src='paths_correct/q218.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 218 / 66) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16759,8 +16953,8 @@
 					<img src='paths_correct/q219.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 219 / 67) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16819,8 +17013,8 @@
 					<img src='paths_correct/q225.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 225 / 68) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16869,8 +17063,8 @@
 					<img src='paths_correct/q226.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 226 / 69) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16915,8 +17109,8 @@
 					<img src='paths_correct/q227.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 227 / 70) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -16960,8 +17154,8 @@
 					<img src='paths_correct/q228.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 228 / 71) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17009,8 +17203,8 @@
 					<img src='paths_correct/q231.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 231 / 72) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17061,8 +17255,8 @@
 					<img src='paths_correct/q232.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 232 / 73) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17114,8 +17308,8 @@
 					<img src='paths_correct/q236.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 236 / 74) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17170,8 +17364,8 @@
 					<img src='paths_correct/q245.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 245 / 75) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17226,8 +17420,8 @@
 					<img src='paths_correct/q246.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 246 / 76) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17272,8 +17466,8 @@
 					<img src='paths_correct/q247.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 247 / 77) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17326,8 +17520,8 @@
 					<img src='paths_correct/q250.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 250 / 78) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17373,8 +17567,8 @@
 					<img src='paths_correct/q257.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 257 / 79) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17425,8 +17619,8 @@
 					<img src='paths_correct/q259.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 259 / 80) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17470,8 +17664,8 @@
 					<img src='paths_correct/q261.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 261 / 81) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17518,8 +17712,8 @@
 					<img src='paths_correct/q265.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 265 / 82) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17565,8 +17759,8 @@
 					<img src='paths_correct/q268.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 268 / 83) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17614,8 +17808,8 @@
 					<img src='paths_correct/q274.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 274 / 84) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17659,8 +17853,8 @@
 					<img src='paths_correct/q276.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 276 / 85) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
@@ -17727,8 +17921,8 @@
 					<img src='paths_correct/q277.png' style="width: 40%;">
 					<p style="font-style: italic;">(Q4: 277 / 86) Green needs to reach blue dot <br>
 					Cells identified by its 0-indexed row and column (0,0 top left).<br> 
-					Green dot <strong>can not</strong> bypass red dots 
-					<br>
+					Green dot <strong>can not</strong> bypass red dots <br>
+					<strong>You can only move Green Dot to the next cell, via top, bottom, left and right movement</strong> (no digonal)<br>
 					</p>
 					<p class="already_done">Green dot will be moved as follows</p>
 					<ul>
