@@ -4,10 +4,10 @@ import pandas as pd
 shuffle=False 
 blockworld = False
 
-blockworld_all = False     
-shuffle_all = True       
-robo_all = False 
-maze_all = False   
+blockworld_all = False       
+shuffle_all = False       
+robo_all = False   
+maze_all = True    
   
 
 accuracy_shuffle = False
@@ -189,15 +189,21 @@ if accuracy_shuffle:
     
                             
 if maze_all:
-    def conver_string_into_action(actions, template, padding='\t\t\t\t\t'):
+    def conver_string_into_action(actions, template, padding='\t\t\t\t\t', change_colors=None):
         template += '\n'
         no_of_actions = len(actions.split('->')) - 1
         if no_of_actions == 1:
-            template += f"{padding}<li>Step 1: {actions}</li>"
+            if change_colors:
+                template += f"{padding}<li {change_colors}>Step 1: {actions}</li>"
+            else:
+                template += f"{padding}<li>Step 1: {actions}</li>"
         else: 
             curr_ = 1 
             for action in actions.split(' , '): 
-                template += f"{padding}<li>Step {curr_}: {action.strip()}</li>\n"
+                if change_colors:
+                    template += f"{padding}<li {change_colors}>Step {curr_}: {action.strip()}</li>\n"
+                else:
+                    template += f"{padding}<li>Step {curr_}: {action.strip()}</li>\n"
                 curr_ += 1
         return template
 
@@ -220,9 +226,14 @@ if maze_all:
         option_counter += 1
         template += f"""
         <div class="question_maze">
-            <div class="already_done">
-                <img src='paths_correct/{image}' style="width: 50%;">
-                <p>Already performed Actions (q4: {file_index} -> {option_counter})</p>
+            <div >
+                <img src='paths_correct/{image}' style="width: 40%;">
+                <p style="font-style: italic;">(Q4: {file_index} / {option_counter}) Green needs to reach blue dot <br>
+                Cells identified by its 0-indexed row and column (0,0 top left).<br> 
+                Green dot <strong>can not</strong> bypass red dots 
+                <br>
+                </p>
+                <p class="already_done">Green dot will be moved as follows</p>
                 <ul>"""
         already_found = None
         
@@ -236,8 +247,8 @@ if maze_all:
                     # print(e)
                     already_found = True 
                     actions = e.split('path')[1]
-
-                    template = conver_string_into_action(actions, template)
+                    
+                    template = conver_string_into_action(actions, template, change_colors='class="already_done"')
                     break 
 
             template += f"""
@@ -312,15 +323,13 @@ if blockworld_all:
         <div class="question_block">
             <div>
                 <img src='blockworld_e_final/{image}' style="width: 100%;">
-                <p>(q2: {file_index}) 
-                Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
+                <p style="font-style: italic;">(Q1: {file_index}) Blocks initial arrangemnet on left and final desired arrangemnet on the right. <br>
 				Block uniquely identified by its ID and column (x axis).  <br>
-                <strong>Rules:</strong>  <br>
-					- Blocks can only be moved if there are no blocks above them <br>
-					- Blocks must be placed either on an empty column or on top of another block<br>
-					- Some steps may be wrong / infeasible  <br> 
-				</p>
-                <p class="already_done"> Already that will be performed on the image on the left </p>
+                Blocks can only be moved if there are no blocks above them <br>
+                Blocks must be placed either on an empty column or on top of another block<br>
+                Some steps may be wrong / infeasible 
+                </p>
+                <p class="already_done"> Blocks (on the image on left) will be moved as follows: </p>
                 <ul>"""
         already_found = None
         with open(q_a, "r") as f:
@@ -393,9 +402,12 @@ if shuffle_all:
 
         template += f"""
             <div class="question_shuffle">
-                <div class="already_done">
+                <div >
                     <img src='shuffle_e_final/{image}' style="width: 100%;">
-                    <p>Already performed Actions (q1: {file_index})</p>
+                    <p style="font-style: italic;"> (Q2: {file_index}) Swap patches on the left to generate image on the right. <br>
+                    Patches identified by its 0-indexed row and column (0,0 top left || 2,2 is bottom right ).  <br>
+                    </p>
+                    <p class="already_done">Patches that will be swapped on image of the left</p>
                     <ul>
         """
         already_found = None
@@ -406,10 +418,10 @@ if shuffle_all:
                 if "Following steps have already been taken" in e:
                     already_found = True 
                     step_1 = e.split('Step 1:')[1].strip()
-                    template += f"\t\t\t\t<li>Step 1: {step_1}</li>\n"
+                    template += f"\t\t\t\t<li class='already_done'>Step 1: {step_1}</li>\n"
                 elif already_found:
                     step_n = e.strip()
-                    template += f"\t\t\t\t\t<li>{step_n}</li>\n"
+                    template += f"\t\t\t\t\t<li class='already_done'>{step_n}</li>\n"
 
             template = template.split('select the correct option')[0]        
             template += f"""
@@ -471,9 +483,13 @@ if robo_all:
         option_counter += 1        
         template += f"""
             <div class="question_robo">
-                <div class="already_done">
+                <div>
                     <img src='{image}' style="width: 100%;">
-                    <p>(q1: {file_index} -> {option_counter}) Already That will be performed</p>
+                    <p style="font-style: italic;">(Q3: {file_index} / {option_counter}) 
+                    Robot / Hand will move objects and rearrange them in the scene. <br>
+                    Desired arrangmenet of block on the right.<br>
+                    </p>
+                    <p class="already_done"> Actions that will be performed on left image</p>
                     <ul>\n"""
 
         already_found = None
@@ -493,7 +509,7 @@ if robo_all:
                     else:
                         step_count, step_n= split
                     step_n = step_n.strip()
-                    template += f"\t\t\t\t\t\t<li>Step {step_count}: {step_n}</li>\n"
+                    template += f"\t\t\t\t\t\t<li class='already_done'>Step {step_count}: {step_n}</li>\n"
                 
 
             template = template.split('select the correct option')[0]        
