@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Pick up the tissue from the packet
+2. Smash the wipes package on the ground
+
+
+A: Pick up a hammer → wipe the slip → throw the tissue in the bin
+
+B: Get a new wipes package and place it properly → wipe the slip
+
+C: Get a new wipes package and place it properly → wipe the slip → throw the tissue in the bin
+
+D: wipe the slip → throw the tissue in the bin
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

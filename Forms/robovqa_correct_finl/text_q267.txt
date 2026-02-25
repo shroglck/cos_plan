@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Pick the yellow packet from the brown tray
+2. Pour water on the box
+
+
+A: Take the packet out of the room → Take the packet in office room → Place the packet on the table
+
+B: Dry the box with a towel → Take the packet out of the room → Take the packet in office room → Place the packet on the table
+
+C: Continue as planned → Take the packet out of the room → Take the packet in office room → Place the packet on the table
+
+D: Dry the box with a towel → Take the packet out of the room → Take the packet in office room
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

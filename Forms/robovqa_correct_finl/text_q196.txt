@@ -1,0 +1,26 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick the coconut tetra pack from the table
+2. move out of the room
+3. move towards the bins
+4. Drop the coconut tetra pack in the bin
+5. enter into the room
+6. turn to the right
+7. pick the welch's packet
+8. Put a basketball in the desk
+
+
+A: Pick up a hammer → move the fruit snacks packet out of the room → Drop the welch's packet in the bin → move into the room → pick the crushed tissue from the table → Pick up the tissue paper → Exit the room → Move close to the bin
+
+B: move the fruit snacks packet out of the room → Drop the welch's packet in the bin → move into the room → pick the crushed tissue from the table → Pick up the tissue paper → Exit the room → Move close to the bin
+
+C: Remove the basketball from the desk → move the fruit snacks packet out of the room → Drop the welch's packet in the bin → move into the room → pick the crushed tissue from the table → Pick up the tissue paper → Exit the room → Move close to the bin
+
+D: Remove the basketball from the desk → move the fruit snacks packet out of the room → Drop the welch's packet in the bin → move into the room → pick the crushed tissue from the table → Pick up the tissue paper → Exit the room
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

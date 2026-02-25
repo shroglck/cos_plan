@@ -1,0 +1,23 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up the tumbler
+2. place tumbler on table
+3. drop straw into dustbin
+4. drop lid into dustbin
+5. Throw the drawer in the garbage bin
+
+
+A: Pick up a hammer → Place the glass → pour the water into the glass → place lid on tumbler → put the straw into the glass
+
+B: Pick the drawer from the garbage bin and place it back → Place the glass → pour the water into the glass → place lid on tumbler
+
+C: Place the glass → pour the water into the glass → place lid on tumbler → put the straw into the glass
+
+D: Pick the drawer from the garbage bin and place it back → Place the glass → pour the water into the glass → place lid on tumbler → put the straw into the glass
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

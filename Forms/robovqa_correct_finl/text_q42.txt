@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up the banana
+2. put banana on corner of the table
+3. put tissue on banana
+4. Throw the cup in the garbage bin
+
+
+A: Pick the cup from the garbage bin and place it back → exit the room with banana
+
+B: exit the room with banana → put banana on the table
+
+C: Pick the cup from the garbage bin and place it back → exit the room with banana → put banana on the table
+
+D: Continue as planned → exit the room with banana → put banana on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

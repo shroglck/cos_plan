@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Move into the room
+2. Pour water on the room
+
+
+A: Pick up a hammer → Grab the door handle → move away from the door handle.
+
+B: Dry the room with a towel → Grab the door handle
+
+C: Grab the door handle → move away from the door handle.
+
+D: Dry the room with a towel → Grab the door handle → move away from the door handle.
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

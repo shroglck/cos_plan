@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. place two ROLD GOLD packet in drawer
+2. drop the packet into drawer
+3. Place chips bag on the floor
+
+
+A: Pick up chips bag from the floor and place properly → Place the packet in the drawer → Put the salt packet in the drawer → Place the white packet inside the drawer
+
+B: Pick up a hammer → Place the packet in the drawer → Put the salt packet in the drawer → Place the white packet inside the drawer
+
+C: Pick up chips bag from the floor and place properly → Place the packet in the drawer → Put the salt packet in the drawer
+
+D: Place the packet in the drawer → Put the salt packet in the drawer → Place the white packet inside the drawer
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

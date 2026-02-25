@@ -1,0 +1,30 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Move towards the white bottle
+2. Grab the white bottle from the tray
+3. Pick up the white bottle
+4. drop the bottle on the table
+5. Pick up the brush in the tray
+6. Drop the brush on the table
+7. Move towards the green glass from the tray
+8. pick up the green cup
+9. place the green cup on the table
+10. Grab the cloth in the tray
+11. Place the cloth on the table
+12. Smash the table on the ground
+
+
+A: Get a new table and place it properly → Pick up the scrub from the tray → drop the scrub on the table → Pick the duster from the green tray → drop the duster on the table → pick the toy carrot from the tray → Place the toy carrot on the table → Lift the duster from the green tray → Place the duster on the table → Grab the marker from the tray → Pick up the marker → Place the marker on the table → Drag the tray to the right → Pick up the toy red chilli from the tray
+
+B: Get a new table and place it properly → Pick up the scrub from the tray → drop the scrub on the table → Pick the duster from the green tray → drop the duster on the table → pick the toy carrot from the tray → Place the toy carrot on the table → Lift the duster from the green tray → Place the duster on the table → Grab the marker from the tray → Pick up the marker → Place the marker on the table → Drag the tray to the right → Pick up the toy red chilli from the tray → Place the toy chilli on the table
+
+C: Pick up the scrub from the tray → drop the scrub on the table → Pick the duster from the green tray → drop the duster on the table → pick the toy carrot from the tray → Place the toy carrot on the table → Lift the duster from the green tray → Place the duster on the table → Grab the marker from the tray → Pick up the marker → Place the marker on the table → Drag the tray to the right → Pick up the toy red chilli from the tray → Place the toy chilli on the table
+
+D: Pick up a hammer → Pick up the scrub from the tray → drop the scrub on the table → Pick the duster from the green tray → drop the duster on the table → pick the toy carrot from the tray → Place the toy carrot on the table → Lift the duster from the green tray → Place the duster on the table → Grab the marker from the tray → Pick up the marker → Place the marker on the table → Drag the tray to the right → Pick up the toy red chilli from the tray → Place the toy chilli on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

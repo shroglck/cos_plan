@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Pick up the wrapper
+2. Put the wrapper in the dustbin
+3. Break the laffy taffy using a hammer
+
+
+A: Replace the laffy taffy with a new one → Open the drawer → Put the candy on the counter → Close the drawer
+
+B: Replace the laffy taffy with a new one → Open the drawer → Put the candy on the counter → Close the drawer → Pick up the candy
+
+C: Open the drawer → Put the candy on the counter → Close the drawer → Pick up the candy
+
+D: Pick up a hammer → Open the drawer → Put the candy on the counter → Close the drawer → Pick up the candy
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

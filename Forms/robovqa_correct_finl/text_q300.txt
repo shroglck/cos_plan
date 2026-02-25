@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Put a glass upside down on the table
+2. Pickup a glass
+3. Place cup on the floor
+
+
+A: place the cup upside down on the stack → Pickup the glass → take the coffee cup over the table → Stack the glass
+
+B: Pick up a hammer → place the cup upside down on the stack → Pickup the glass → take the coffee cup over the table → Stack the glass
+
+C: Pick up cup from the floor and place properly → place the cup upside down on the stack → Pickup the glass → take the coffee cup over the table
+
+D: Pick up cup from the floor and place properly → place the cup upside down on the stack → Pickup the glass → take the coffee cup over the table → Stack the glass
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

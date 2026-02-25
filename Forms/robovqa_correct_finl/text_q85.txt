@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. grab the top drawer handle
+2. open the top drawer
+3. Transfer sweater from filing cabinet to drawer
+
+
+A: Transfer sweater from drawer back to filing cabinet → pick the yellow packet from the table → drop the wipes packet in the drawer → close the top drawer
+
+B: pick the yellow packet from the table → drop the wipes packet in the drawer → close the top drawer
+
+C: Transfer sweater from drawer back to filing cabinet → pick the yellow packet from the table → drop the wipes packet in the drawer
+
+D: Continue as planned → pick the yellow packet from the table → drop the wipes packet in the drawer → close the top drawer
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

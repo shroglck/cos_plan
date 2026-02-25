@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. put the yellow packet on the table
+2. Put a basketball in the cup holder
+
+
+A: Remove the basketball from the cup holder → put the white packet on the table → put the white packet over the yellow packets
+
+B: Leave things as they are → put the white packet on the table → put the white packet over the yellow packets
+
+C: put the white packet on the table → put the white packet over the yellow packets
+
+D: Remove the basketball from the cup holder → put the white packet on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

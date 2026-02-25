@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Pick up the trash
+2. Enter the room
+3. Transfer card from bottle to table
+
+
+A: Transfer card from table back to bottle → Put the trash in the trashbin → Pick up the scissors → Put the scissors on the table
+
+B: Pick up a hammer → Put the trash in the trashbin → Pick up the scissors → Put the scissors on the table
+
+C: Transfer card from table back to bottle → Put the trash in the trashbin → Pick up the scissors
+
+D: Put the trash in the trashbin → Pick up the scissors → Put the scissors on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

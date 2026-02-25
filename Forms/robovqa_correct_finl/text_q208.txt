@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Put glass upside down on the table
+2. Place wiper on the floor
+
+
+A: Stack the glass → put stack in the recycle bin
+
+B: Pick up wiper from the floor and place properly → Stack the glass
+
+C: Pick up a hammer → Stack the glass → put stack in the recycle bin
+
+D: Pick up wiper from the floor and place properly → Stack the glass → put stack in the recycle bin
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

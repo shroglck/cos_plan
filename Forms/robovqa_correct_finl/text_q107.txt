@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Take the water in the glass
+2. Put the glass upright on the counter
+3. Put a basketball in the trash can
+
+
+A: Put the glass on the counter top → Put the glass on the filling machine → Put the lid on the glass → Fill the glass → Put the glass on the table
+
+B: Remove the basketball from the trash can → Put the glass on the counter top → Put the glass on the filling machine → Put the lid on the glass → Fill the glass → Put the glass on the table
+
+C: Remove the basketball from the trash can → Put the glass on the counter top → Put the glass on the filling machine → Put the lid on the glass → Fill the glass
+
+D: Pick up a hammer → Put the glass on the counter top → Put the glass on the filling machine → Put the lid on the glass → Fill the glass → Put the glass on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

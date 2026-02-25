@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. put cup on water purifier machine
+2. Put a basketball in the cup
+
+
+A: Remove the basketball from the cup → fill water in cup → put cup on table
+
+B: Remove the basketball from the cup → fill water in cup
+
+C: fill water in cup → put cup on table
+
+D: Continue as planned → fill water in cup → put cup on table
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

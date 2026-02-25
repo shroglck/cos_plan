@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up the can
+2. Pick up  the cock tin on table
+3. Smash the cup on the ground
+
+
+A: Continue as planned → take  the can above the table → pick the glass and place on the same table → place the glass on the table → put the glass on the leftside table
+
+B: Get a new cup and place it properly → take  the can above the table → pick the glass and place on the same table → place the glass on the table → put the glass on the leftside table
+
+C: take  the can above the table → pick the glass and place on the same table → place the glass on the table → put the glass on the leftside table
+
+D: Get a new cup and place it properly → take  the can above the table → pick the glass and place on the same table → place the glass on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

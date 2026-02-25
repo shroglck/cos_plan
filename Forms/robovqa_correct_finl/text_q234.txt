@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick the toy carrot from the orange bowl
+2. place the toy carrot on the black table
+3. Place carrot on the floor
+
+
+A: Leave things as they are → pick the toy chilli from the orange bowl → place the toy chilli on the black table → pick the toy apple from the orange bowl
+
+B: pick the toy chilli from the orange bowl → place the toy chilli on the black table → pick the toy apple from the orange bowl
+
+C: Pick up carrot from the floor and place properly → pick the toy chilli from the orange bowl → place the toy chilli on the black table → pick the toy apple from the orange bowl
+
+D: Pick up carrot from the floor and place properly → pick the toy chilli from the orange bowl → place the toy chilli on the black table
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

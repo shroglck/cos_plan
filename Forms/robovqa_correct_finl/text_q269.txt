@@ -1,0 +1,23 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up the marker
+2. go to the white board
+3. write capital letter P
+4. write letter I on white board
+5. Transfer marker from drawer to bag
+
+
+A: Write f on the board → write letter R on white board → write letter E on white board → Drop the marker on the table → wipe the letter E → wipe the letter R → Rub the board
+
+B: Transfer marker from bag back to drawer → Write f on the board → write letter R on white board → write letter E on white board → Drop the marker on the table → wipe the letter E → wipe the letter R
+
+C: Leave things as they are → Write f on the board → write letter R on white board → write letter E on white board → Drop the marker on the table → wipe the letter E → wipe the letter R → Rub the board
+
+D: Transfer marker from bag back to drawer → Write f on the board → write letter R on white board → write letter E on white board → Drop the marker on the table → wipe the letter E → wipe the letter R → Rub the board
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

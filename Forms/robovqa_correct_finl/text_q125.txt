@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up sanitizer bottle
+2. put pen on the table
+3. Place notepad on the floor
+
+
+A: Pick up notepad from the floor and place properly → put sticky notes on the table → put pen on the sticky notes → pick up sticky notes with pen
+
+B: Continue as planned → put sticky notes on the table → put pen on the sticky notes → pick up sticky notes with pen
+
+C: put sticky notes on the table → put pen on the sticky notes → pick up sticky notes with pen
+
+D: Pick up notepad from the floor and place properly → put sticky notes on the table → put pen on the sticky notes
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

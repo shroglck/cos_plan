@@ -1,0 +1,46 @@
+Start:[6, 5]End:[7, 6]Obstacles[[1, 5], [3, 7], [1, 1], [5, 1], [1, 4], [6, 6]]
+Please analyze this checkboard image following these specific instructions along with the information about the graph as :
+You are looking at a checkboard pattern image that contains:
+
+A black and white grid (either 3x3 or 4x4)
+A green circle marking the start point
+A blue circle marking the end point
+2-4 red rectangular obstacles
+Provide your answer in two formats:
+
+Coordinate list:
+Start at the green circle and list all coordinates as [(row,col)], where (0,0) is the top-left cell.
+Step-by-step directions:
+Starting from the green circle:
+
+
+Use RIGHT for moving east
+Use LEFT for moving west
+Use DOWN for moving south
+Use UP for moving north
+
+For example:
+If you see a path from top-left to bottom-right going around an obstacle, you should respond like this:
+Coordinate Path: [(0,0), (0,1), (0,2), (1,2), (2,2)]
+Directional Instructions:
+Starting from the green circle at (0,0):
+
+Move RIGHT to cell (0,1)
+Move RIGHT to cell (0,2)
+Move DOWN to cell (1,2)
+Move DOWN to cell (2,2)
+Reached the blue circle
+
+Please verify that:
+
+The path starts at the green circle
+The path ends at the blue circle
+The path avoids all red obstacles
+Only horizontal and vertical moves are used
+That path do you see in this image?
+The green circle has already made along the path [6, 5] -> [7, 4]
+You will be provided with a series of options representing distinct path you must select the path which correctly leads from start of the path to the end. Options are given as {'D': '[7, 4] -> [6, 4] , [6, 4] -> [6, 5] , [6, 5] -> [7, 5] , [7, 5] -> [7, 6]', 'C': '[7, 5] -> [7, 6]', 'A': '[7, 3] -> [7, 2] , [7, 2] -> [7, 1] , [7, 1] -> [7, 0]', 'B': '[7, 3] -> [7, 2] , [7, 2] -> [7, 1] , [7, 1] -> [7, 0]'}. Provide only the correct answer A,B,C,D no explanation needed
+ Provide the correct options only as output not explanation required.
+
+Correct Answer: D.
+

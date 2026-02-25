@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Place the plastic cup straight on table
+2. grab the glass
+3. upright the glass
+4. Throw the cup in the garbage bin
+
+
+A: Pick the cup from the garbage bin and place it back → grab the galss → Place the plastic cup on table
+
+B: Pick up a hammer → grab the galss → Place the plastic cup on table
+
+C: grab the galss → Place the plastic cup on table
+
+D: Pick the cup from the garbage bin and place it back → grab the galss
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

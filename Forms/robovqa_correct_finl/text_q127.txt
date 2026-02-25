@@ -1,0 +1,23 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. move your arm towards the drawer
+2. pull the drawer
+3. go towards the pen
+4. pick a pen from the table
+5. Put a basketball in the basket
+
+
+A: drop the blue pen in the drawer → move your arm close to the pens → pick the pen → release the pen in the drawer → pick the pen from the table → drop the pen in the drawer → close the drawer → pull out a wet wipe from the packet
+
+B: Remove the basketball from the basket → drop the blue pen in the drawer → move your arm close to the pens → pick the pen → release the pen in the drawer → pick the pen from the table → drop the pen in the drawer → close the drawer → pull out a wet wipe from the packet
+
+C: Remove the basketball from the basket → drop the blue pen in the drawer → move your arm close to the pens → pick the pen → release the pen in the drawer → pick the pen from the table → drop the pen in the drawer → close the drawer
+
+D: Continue as planned → drop the blue pen in the drawer → move your arm close to the pens → pick the pen → release the pen in the drawer → pick the pen from the table → drop the pen in the drawer → close the drawer → pull out a wet wipe from the packet
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

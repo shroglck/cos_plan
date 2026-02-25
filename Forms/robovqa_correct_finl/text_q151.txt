@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up the wrapper
+2. enter the room
+3. Break the waste paper using a hammer
+
+
+A: put the wrapper in the bin → exit the room → pick up the sanitizer bottle
+
+B: Replace the waste paper with a new one → put the wrapper in the bin → exit the room
+
+C: Replace the waste paper with a new one → put the wrapper in the bin → exit the room → pick up the sanitizer bottle
+
+D: Pick up a hammer → put the wrapper in the bin → exit the room → pick up the sanitizer bottle
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

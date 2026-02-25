@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Place the cups on the table
+2. Open the jar lid
+3. Pick up the scooper
+4. Place cashews on the floor
+
+
+A: Place the kaju in the cup → Place the scooper in the stand → Close the lid → Place the apple in the cup → Place the cup on the table
+
+B: Continue as planned → Place the kaju in the cup → Place the scooper in the stand → Close the lid → Place the apple in the cup → Place the cup on the table
+
+C: Pick up cashews from the floor and place properly → Place the kaju in the cup → Place the scooper in the stand → Close the lid → Place the apple in the cup → Place the cup on the table
+
+D: Pick up cashews from the floor and place properly → Place the kaju in the cup → Place the scooper in the stand → Close the lid → Place the apple in the cup
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

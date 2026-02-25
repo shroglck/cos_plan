@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Place the plastic glass on the table
+2. Fill the water in the glass
+3. Place plastic cup on the floor
+
+
+A: Place the water glass on the table → Place the lid on the glass → Place the straw in the water glass
+
+B: Pick up a hammer → Place the water glass on the table → Place the lid on the glass → Place the straw in the water glass
+
+C: Pick up plastic cup from the floor and place properly → Place the water glass on the table → Place the lid on the glass → Place the straw in the water glass
+
+D: Pick up plastic cup from the floor and place properly → Place the water glass on the table → Place the lid on the glass
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

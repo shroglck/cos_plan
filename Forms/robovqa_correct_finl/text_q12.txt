@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. move close to the table
+2. Put a basketball in the table
+
+
+A: Leave things as they are → pick the wet wipes packet → get in to the room → place the wet wipes packet on the table
+
+B: Remove the basketball from the table → pick the wet wipes packet → get in to the room → place the wet wipes packet on the table
+
+C: Remove the basketball from the table → pick the wet wipes packet → get in to the room
+
+D: pick the wet wipes packet → get in to the room → place the wet wipes packet on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

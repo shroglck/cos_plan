@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. push the chair backward
+2. open the top drawer
+3. Break the red eraser using a hammer
+
+
+A: Pick up a hammer → put duster on the table → close the drawer → push the chair forward
+
+B: put duster on the table → close the drawer → push the chair forward
+
+C: Replace the red eraser with a new one → put duster on the table → close the drawer
+
+D: Replace the red eraser with a new one → put duster on the table → close the drawer → push the chair forward
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

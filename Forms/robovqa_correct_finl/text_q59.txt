@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Place the paper cup on the table
+2. Place the paper cup near the jar
+3. Place the lid on the table
+4. Throw the cup stack in the garbage bin
+
+
+A: Pickup the scooper → Place the popcorn in the cup → Place the scooper in the stand → Place the lid on the jar
+
+B: Pick the cup stack from the garbage bin and place it back → Pickup the scooper → Place the popcorn in the cup → Place the scooper in the stand → Place the lid on the jar
+
+C: Leave things as they are → Pickup the scooper → Place the popcorn in the cup → Place the scooper in the stand → Place the lid on the jar
+
+D: Pick the cup stack from the garbage bin and place it back → Pickup the scooper → Place the popcorn in the cup → Place the scooper in the stand
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. drop the fork in dustbin
+2. drop the fork in the bin
+3. Pour water on the pen holder
+
+
+A: Pick up a hammer → pick up a cup → keep the pink cup on table
+
+B: pick up a cup → keep the pink cup on table
+
+C: Dry the pen holder with a towel → pick up a cup
+
+D: Dry the pen holder with a towel → pick up a cup → keep the pink cup on table
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Pick the glass
+2. move the arm upwards
+3. Move the glass to the left side of the table
+4. Break the cup using a hammer
+
+
+A: Continue as planned → open the jar lid → Pick the scooper → keep the spoon in the jar → Pick the pista in the jar with scooper
+
+B: Replace the cup with a new one → open the jar lid → Pick the scooper → keep the spoon in the jar
+
+C: open the jar lid → Pick the scooper → keep the spoon in the jar → Pick the pista in the jar with scooper
+
+D: Replace the cup with a new one → open the jar lid → Pick the scooper → keep the spoon in the jar → Pick the pista in the jar with scooper
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick wipe from wipe packet
+2. Put the tissue on the counter
+3. Throw the trash bin in the garbage bin
+
+
+A: Pick the trash bin from the garbage bin and place it back → put the wipe on the table → open the tissue
+
+B: put the wipe on the table → open the tissue → place the wipe in dustbin
+
+C: Leave things as they are → put the wipe on the table → open the tissue → place the wipe in dustbin
+
+D: Pick the trash bin from the garbage bin and place it back → put the wipe on the table → open the tissue → place the wipe in dustbin
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

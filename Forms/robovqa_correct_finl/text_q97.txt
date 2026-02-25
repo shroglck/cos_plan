@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. place the plastic glass on water purifier
+2. Break the cup using a hammer
+
+
+A: Replace the cup with a new one → press the button → place the glass on table
+
+B: Leave things as they are → press the button → place the glass on table
+
+C: Replace the cup with a new one → press the button
+
+D: press the button → place the glass on table
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

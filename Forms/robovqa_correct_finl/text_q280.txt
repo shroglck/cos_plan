@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. open the door
+2. open the drawer
+3. Put a basketball in the bowl
+
+
+A: Leave things as they are → put packet on the table → put green candy on the table → place the packet on the table → close the drawer
+
+B: Remove the basketball from the bowl → put packet on the table → put green candy on the table → place the packet on the table → close the drawer
+
+C: Remove the basketball from the bowl → put packet on the table → put green candy on the table → place the packet on the table
+
+D: put packet on the table → put green candy on the table → place the packet on the table → close the drawer
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

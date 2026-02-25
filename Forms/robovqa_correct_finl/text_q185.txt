@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Move out of the room
+2. Enter the office
+3. Move to the white board
+4. Pour water on the wall
+
+
+A: Move towards the white board → Wipe the white board with the cloth
+
+B: Dry the wall with a towel → Move towards the white board
+
+C: Pick up a hammer → Move towards the white board → Wipe the white board with the cloth
+
+D: Dry the wall with a towel → Move towards the white board → Wipe the white board with the cloth
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

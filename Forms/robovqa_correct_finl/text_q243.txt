@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Move your arm close to the white glass
+2. Pick up the white glass
+3. Break the cup using a hammer
+
+
+A: Pick up a hammer → Move towards the tray → Place the white glass in the  tray → move close to the green cup
+
+B: Replace the cup with a new one → Move towards the tray → Place the white glass in the  tray
+
+C: Move towards the tray → Place the white glass in the  tray → move close to the green cup
+
+D: Replace the cup with a new one → Move towards the tray → Place the white glass in the  tray → move close to the green cup
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

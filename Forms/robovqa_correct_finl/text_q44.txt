@@ -1,0 +1,29 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Move towards the yellow object
+2. Place the yellow object on the table
+3. Move towards the plastic basket
+4. Move towards the orange object
+5. pick the orange object
+6. Place the orange object  on the table
+7. Grasp the green object
+8. Pick up the green object
+9. Place the green object on the table
+10. Grasp the purple object
+11. Place toy boat on the floor
+
+
+A: Pick up toy boat from the floor and place properly → Place the purple object on the table → Move your arm towards the top left drawer → Open the top left drawer → Drop the orange object into the top left drawer → Drop the yellow object into the top left drawer → Drop the purple object into the top left drawer → Move towards the green object → Pick up the green object  from the table → place the green object in the drawer
+
+B: Place the purple object on the table → Move your arm towards the top left drawer → Open the top left drawer → Drop the orange object into the top left drawer → Drop the yellow object into the top left drawer → Drop the purple object into the top left drawer → Move towards the green object → Pick up the green object  from the table → place the green object in the drawer
+
+C: Pick up toy boat from the floor and place properly → Place the purple object on the table → Move your arm towards the top left drawer → Open the top left drawer → Drop the orange object into the top left drawer → Drop the yellow object into the top left drawer → Drop the purple object into the top left drawer → Move towards the green object → Pick up the green object  from the table
+
+D: Continue as planned → Place the purple object on the table → Move your arm towards the top left drawer → Open the top left drawer → Drop the orange object into the top left drawer → Drop the yellow object into the top left drawer → Drop the purple object into the top left drawer → Move towards the green object → Pick up the green object  from the table → place the green object in the drawer
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

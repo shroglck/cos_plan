@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Put the glass on the table
+2. open the lead of the  cup
+3. Put the lid in the recyclebin
+4. Break the straw using a hammer
+
+
+A: Pick up a hammer → place the glass on the purifier → turn on the dispenser
+
+B: Replace the straw with a new one → place the glass on the purifier
+
+C: place the glass on the purifier → turn on the dispenser
+
+D: Replace the straw with a new one → place the glass on the purifier → turn on the dispenser
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

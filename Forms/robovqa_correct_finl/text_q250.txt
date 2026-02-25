@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Put the pouch in the tray
+2. Break the candy using a hammer
+
+
+A: put candy in the tray → Move the tray at left → Move the tray to left side
+
+B: Pick up a hammer → put candy in the tray → Move the tray at left → Move the tray to left side
+
+C: Replace the candy with a new one → put candy in the tray → Move the tray at left → Move the tray to left side
+
+D: Replace the candy with a new one → put candy in the tray → Move the tray at left
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

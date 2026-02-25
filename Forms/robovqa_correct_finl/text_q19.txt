@@ -1,0 +1,24 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. open fridge door
+2. pickup ito en green tea from the fridge
+3. put ito en green tea on the wooden table
+4. unstack the paper cup
+5. put the paper cup on the gray bowl
+6. Put a basketball in the desk
+
+
+A: Leave things as they are → put the glass jar lid on the gray table → put the black holder upright → pickup the spoon from the holder → put few badams in the paper cup → put spoon back into the holder → put lid on the glass jar → put paper cup on the wooden table
+
+B: put the glass jar lid on the gray table → put the black holder upright → pickup the spoon from the holder → put few badams in the paper cup → put spoon back into the holder → put lid on the glass jar → put paper cup on the wooden table
+
+C: Remove the basketball from the desk → put the glass jar lid on the gray table → put the black holder upright → pickup the spoon from the holder → put few badams in the paper cup → put spoon back into the holder → put lid on the glass jar
+
+D: Remove the basketball from the desk → put the glass jar lid on the gray table → put the black holder upright → pickup the spoon from the holder → put few badams in the paper cup → put spoon back into the holder → put lid on the glass jar → put paper cup on the wooden table
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

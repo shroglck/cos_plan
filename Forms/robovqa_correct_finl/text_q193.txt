@@ -1,0 +1,25 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Place the wet wipes packet on the table
+2. Open the cap of the packet
+3. Open the tape on the packet
+4. Place the wet wipe on the table
+5. Stick the tape on the packet
+6. Close the packet cap
+7. Put a basketball in the trash bin
+
+
+A: Remove the basketball from the trash bin → Place the wet wipes packet in the cart → Clean the top portion of the table → Clean the middle left portion of the table → Clean the bottom left portion of the table → Clean the bottom left part of the table → Clean the bottom right portion of the table → Clean the middle right portion of the table → Clean the top right portion of the table
+
+B: Pick up a hammer → Place the wet wipes packet in the cart → Clean the top portion of the table → Clean the middle left portion of the table → Clean the bottom left portion of the table → Clean the bottom left part of the table → Clean the bottom right portion of the table → Clean the middle right portion of the table → Clean the top right portion of the table → Place the wet wipe in the smallest portion in the trash
+
+C: Remove the basketball from the trash bin → Place the wet wipes packet in the cart → Clean the top portion of the table → Clean the middle left portion of the table → Clean the bottom left portion of the table → Clean the bottom left part of the table → Clean the bottom right portion of the table → Clean the middle right portion of the table → Clean the top right portion of the table → Place the wet wipe in the smallest portion in the trash
+
+D: Place the wet wipes packet in the cart → Clean the top portion of the table → Clean the middle left portion of the table → Clean the bottom left portion of the table → Clean the bottom left part of the table → Clean the bottom right portion of the table → Clean the middle right portion of the table → Clean the top right portion of the table → Place the wet wipe in the smallest portion in the trash
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

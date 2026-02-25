@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. put the key in the tray
+2. pick up the snack packet
+3. drop the snack packet in the tray
+4. Throw the black shaker in the garbage bin
+
+
+A: Pick the black shaker from the garbage bin and place it back → pick up the yellow packet → drop the packet into the basket
+
+B: Continue as planned → pick up the yellow packet → drop the packet into the basket
+
+C: Pick the black shaker from the garbage bin and place it back → pick up the yellow packet
+
+D: pick up the yellow packet → drop the packet into the basket
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

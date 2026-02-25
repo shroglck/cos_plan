@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Pick up the wrapper
+2. Put the wrapper in the dustbin
+3. Put a basketball in the bowl
+
+
+A: Continue as planned → Put the pen on the table → Put the sticky notes on the table → Put the pen on the sticky notes → Pick up the sticky notes
+
+B: Put the pen on the table → Put the sticky notes on the table → Put the pen on the sticky notes → Pick up the sticky notes
+
+C: Remove the basketball from the bowl → Put the pen on the table → Put the sticky notes on the table → Put the pen on the sticky notes → Pick up the sticky notes
+
+D: Remove the basketball from the bowl → Put the pen on the table → Put the sticky notes on the table → Put the pen on the sticky notes
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

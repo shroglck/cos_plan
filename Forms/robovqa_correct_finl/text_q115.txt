@@ -1,0 +1,23 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up the scissor
+2. put scissor in the holder
+3. open the almirah
+4. pick up a pen
+5. Place scissors on the floor
+
+
+A: Pick up scissors from the floor and place properly → put pen on the table → close the almirah
+
+B: Continue as planned → put pen on the table → close the almirah → pick up the pen
+
+C: put pen on the table → close the almirah → pick up the pen
+
+D: Pick up scissors from the floor and place properly → put pen on the table → close the almirah → pick up the pen
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

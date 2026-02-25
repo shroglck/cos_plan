@@ -1,0 +1,29 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Move to the green tray
+2. move away from the tray
+3. Pick up the duster
+4. place the duster on the table
+5. Pick the brush from the green tray
+6. Put the brush on the table
+7. Lift the green cup from the green tray
+8. Uplift the green glass from the green tray
+9. Release the green cup in the green tray
+10. Move towards the glass
+11. Smash the tray on the ground
+
+
+A: Pick up the green cup from the green tray → Put the green cup on the table → hold the tray → Grasp the white bottle in the green tray → Place the white bottle on the table → Grasp the duster in the green tray → Pick up the duster from the green tray → Grasp the sponge in the green tray → Pick up the sponge along with the cloth from the green tray → Release the sponge → Lift the carrot → Drop the carrot on the table → touch the tray → Grasp the toy chilli in the green tray → Place the toy chilli on the table → Place the marker on the table
+
+B: Continue as planned → Pick up the green cup from the green tray → Put the green cup on the table → hold the tray → Grasp the white bottle in the green tray → Place the white bottle on the table → Grasp the duster in the green tray → Pick up the duster from the green tray → Grasp the sponge in the green tray → Pick up the sponge along with the cloth from the green tray → Release the sponge → Lift the carrot → Drop the carrot on the table → touch the tray → Grasp the toy chilli in the green tray → Place the toy chilli on the table → Place the marker on the table
+
+C: Get a new tray and place it properly → Pick up the green cup from the green tray → Put the green cup on the table → hold the tray → Grasp the white bottle in the green tray → Place the white bottle on the table → Grasp the duster in the green tray → Pick up the duster from the green tray → Grasp the sponge in the green tray → Pick up the sponge along with the cloth from the green tray → Release the sponge → Lift the carrot → Drop the carrot on the table → touch the tray → Grasp the toy chilli in the green tray → Place the toy chilli on the table
+
+D: Get a new tray and place it properly → Pick up the green cup from the green tray → Put the green cup on the table → hold the tray → Grasp the white bottle in the green tray → Place the white bottle on the table → Grasp the duster in the green tray → Pick up the duster from the green tray → Grasp the sponge in the green tray → Pick up the sponge along with the cloth from the green tray → Release the sponge → Lift the carrot → Drop the carrot on the table → touch the tray → Grasp the toy chilli in the green tray → Place the toy chilli on the table → Place the marker on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

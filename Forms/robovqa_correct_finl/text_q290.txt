@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. place the glass on the shelf
+2. open the white jar
+3. pick the spoon in the coffee pea
+4. Break the paper cup using a hammer
+
+
+A: Leave things as they are → take the coffee pea in the cup → put the spoon in the box → lock the jar → pick the cup on the table
+
+B: Replace the paper cup with a new one → take the coffee pea in the cup → put the spoon in the box → lock the jar → pick the cup on the table
+
+C: take the coffee pea in the cup → put the spoon in the box → lock the jar → pick the cup on the table
+
+D: Replace the paper cup with a new one → take the coffee pea in the cup → put the spoon in the box → lock the jar
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

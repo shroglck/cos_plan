@@ -1,0 +1,25 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. open the door
+2. Switch on the light
+3. Take the black cloth from the hanger
+4. clean the board with the black cloth
+5. Put the black cloth on the table
+6. Take the black cloth to the board
+7. Break the tongs using a hammer
+
+
+A: Put the black cloth to the hanger → switch off the light → close the door → clean the board with the duster → keep the duster on the board stand → clean the board with black cloth → keep the black cloth to the hanger
+
+B: Continue as planned → Put the black cloth to the hanger → switch off the light → close the door → clean the board with the duster → keep the duster on the board stand → clean the board with black cloth → keep the black cloth to the hanger
+
+C: Replace the tongs with a new one → Put the black cloth to the hanger → switch off the light → close the door → clean the board with the duster → keep the duster on the board stand → clean the board with black cloth
+
+D: Replace the tongs with a new one → Put the black cloth to the hanger → switch off the light → close the door → clean the board with the duster → keep the duster on the board stand → clean the board with black cloth → keep the black cloth to the hanger
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

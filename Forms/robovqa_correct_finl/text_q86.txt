@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. place the bottle on the table
+2. place the tissue on the table
+3. open the cap of the bottle
+4. Break the water bottle using a hammer
+
+
+A: Fill the water in the bottle → close the cap
+
+B: Pick up a hammer → Fill the water in the bottle → close the cap
+
+C: Replace the water bottle with a new one → Fill the water in the bottle
+
+D: Replace the water bottle with a new one → Fill the water in the bottle → close the cap
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

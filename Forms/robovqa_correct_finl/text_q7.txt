@@ -1,0 +1,26 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Grasp a  orange highlighter
+2. Pick a yellow highlighter from the cardboard box
+3. Turn to the right
+4. Place the highlighter on the table
+5. Exit the meeting room
+6. Pick a blue highlighter from the cardboard box
+7. Go into the meeting room
+8. Break the highlighter using a hammer
+
+
+A: Leave things as they are → Place the blue highlighter on the table → Leave the meeting room → Pick a green highlighter from the cardboard box → Go close to the green highlighter which is on the floor → Pick the green highlighter from the floor → take a green marker into the meeting room → Place the green highlighter on the table
+
+B: Place the blue highlighter on the table → Leave the meeting room → Pick a green highlighter from the cardboard box → Go close to the green highlighter which is on the floor → Pick the green highlighter from the floor → take a green marker into the meeting room → Place the green highlighter on the table
+
+C: Replace the highlighter with a new one → Place the blue highlighter on the table → Leave the meeting room → Pick a green highlighter from the cardboard box → Go close to the green highlighter which is on the floor → Pick the green highlighter from the floor → take a green marker into the meeting room
+
+D: Replace the highlighter with a new one → Place the blue highlighter on the table → Leave the meeting room → Pick a green highlighter from the cardboard box → Go close to the green highlighter which is on the floor → Pick the green highlighter from the floor → take a green marker into the meeting room → Place the green highlighter on the table
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

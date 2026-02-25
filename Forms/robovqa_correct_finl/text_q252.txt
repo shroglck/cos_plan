@@ -1,0 +1,20 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. put sticky notes in the organiser
+2. Break the black pens using a hammer
+
+
+A: Replace the black pens with a new one → move organiser to the center → put black pen in the organiser → put blue pens in the organiser
+
+B: Leave things as they are → move organiser to the center → put black pen in the organiser → put blue pens in the organiser
+
+C: Replace the black pens with a new one → move organiser to the center → put black pen in the organiser
+
+D: move organiser to the center → put black pen in the organiser → put blue pens in the organiser
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+

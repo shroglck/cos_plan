@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. pick up marker
+2. grab the marker
+3. Throw the whiteboard in the garbage bin
+
+
+A: Continue as planned → write on the board → take marker to the white board
+
+B: Pick the whiteboard from the garbage bin and place it back → write on the board
+
+C: write on the board → take marker to the white board
+
+D: Pick the whiteboard from the garbage bin and place it back → write on the board → take marker to the white board
+
+Select the best option.
+
+Correct Answer: The correct answer is D..
+

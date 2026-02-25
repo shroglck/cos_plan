@@ -1,0 +1,21 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. put nut in paper bowl
+2. clean the table
+3. Throw the can in the garbage bin
+
+
+A: put tissue in paper bowl → put paper bowl in dustbin → put tissue in dustbin → put orange can in dustbin
+
+B: Pick the can from the garbage bin and place it back → put tissue in paper bowl → put paper bowl in dustbin → put tissue in dustbin → put orange can in dustbin
+
+C: Pick the can from the garbage bin and place it back → put tissue in paper bowl → put paper bowl in dustbin → put tissue in dustbin
+
+D: Leave things as they are → put tissue in paper bowl → put paper bowl in dustbin → put tissue in dustbin → put orange can in dustbin
+
+Select the best option.
+
+Correct Answer: The correct answer is B..
+

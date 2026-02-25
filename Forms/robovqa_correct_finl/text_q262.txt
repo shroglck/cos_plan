@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. Fold the left sleeve of the T shirt
+2. unfold the corner middle part of t-shirt
+3. fold the right sleeve of the shirt
+4. Smash the table on the ground
+
+
+A: Pick up a hammer → unfold the down part of the t-shirt → fold the left bottom of the shirt → pull up the t-shirt → unfold the right sleeve → put the shirt in the centre of the table
+
+B: Get a new table and place it properly → unfold the down part of the t-shirt → fold the left bottom of the shirt → pull up the t-shirt → unfold the right sleeve
+
+C: Get a new table and place it properly → unfold the down part of the t-shirt → fold the left bottom of the shirt → pull up the t-shirt → unfold the right sleeve → put the shirt in the centre of the table
+
+D: unfold the down part of the t-shirt → fold the left bottom of the shirt → pull up the t-shirt → unfold the right sleeve → put the shirt in the centre of the table
+
+Select the best option.
+
+Correct Answer: The correct answer is C..
+

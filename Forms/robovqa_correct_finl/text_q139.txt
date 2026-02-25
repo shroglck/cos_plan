@@ -1,0 +1,22 @@
+Start:NoneEnd:NoneObstaclesNone
+Review the provided composite image, which displays two key stages: the starting state on the left and the completed state on the right. All steps listed have been completed, and future actions must be based on this sequence. Here is the sequence of actions:
+
+The robot has completed these steps:
+1. put blue marker on board frame
+2. put red marker on board frame
+3. put green marker on board frame
+4. Break the eraser using a hammer
+
+
+A: Replace the eraser with a new one → put black marker on board frame → erase board using duster
+
+B: Replace the eraser with a new one → put black marker on board frame
+
+C: Pick up a hammer → put black marker on board frame → erase board using duster
+
+D: put black marker on board frame → erase board using duster
+
+Select the best option.
+
+Correct Answer: The correct answer is A..
+
