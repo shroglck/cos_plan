@@ -17990,10 +17990,10 @@
 	})
 
 	document.addEventListener("DOMContentLoaded", () => {
-    const questions_maze = Array.from(document.querySelectorAll(".question_maze"))
-	const questions_block = Array.from(document.querySelectorAll(".question_block"))
-	const questions_shuffle = Array.from(document.querySelectorAll(".question_shuffle"))
-	const questions_robo = Array.from(document.querySelectorAll(".question_robo"))
+    var questions_maze = Array.from(document.querySelectorAll(".question_maze"))
+	var questions_block = Array.from(document.querySelectorAll(".question_block"))
+	var questions_shuffle = Array.from(document.querySelectorAll(".question_shuffle"))
+	var questions_robo = Array.from(document.querySelectorAll(".question_robo"))
 	
 
 	function selectRandomNumbers(count, min, max) {
@@ -18005,14 +18005,35 @@
 		return numbers;
 	}
 
+	function remove_elements(removeList, questions) {
+		questions.forEach(element => {
+			const radio = element.querySelector("input[type='radio']");
+			if (!radio) return;
+			if (removeList.includes(radio.name)) {
+				element.remove();
+			}
+		});
+	}
+
+	
 	// ### Block 
+	const removeList_block = ['P1 : Q3', 'P1 : Q9', 'P1 : Q15', 'P1 : Q21', 'P1 : Q25', 'P1 : Q61', 'P1 : Q66', 
+		'P1 : Q72', 'P1 : Q85', 'P1 : Q88', 'P1 : Q90', 'P1 : Q92' , 'P1 : Q94'];
+	remove_elements(removeList_block, questions_block);
+	questions_block = Array.from(document.querySelectorAll(".question_block"))
+	// questions_block.forEach(element => {console.log( element.querySelector("input[type='radio']").name )})
+	
 	const q_numbers_block = selectRandomNumbers(1, 0, questions_block.length );
-	console.log(q_numbers_block, questions_block.length, );
+	console.log("Block:" , q_numbers_block, questions_block.length, );
     questions_block.forEach(q => q.style.display = "none");
 	q_numbers_block.forEach(i => questions_block[i].style.display = "block")
 
 
 	// // ### Shuffle 
+	const removeList_shuffle = ['P2 : Q8', 'P2 : Q15', 'P2 : Q28', 'P2 : Q46',  'P2 : Q57',  'P2 : Q66',  'P2 : Q67', 'P2 : Q70',  'P2 : Q71',  'P2 : Q78',  'P2 : Q89'];
+	remove_elements(removeList_shuffle, questions_shuffle);
+	questions_shuffle = Array.from(document.querySelectorAll(".question_shuffle"))
+	// questions_shuffle.forEach(element => {console.log( element.querySelector("input[type='radio']").name )})
 	const q_numbers_shuffle = selectRandomNumbers(1, 0, questions_shuffle.length );
 	console.log(q_numbers_shuffle, questions_shuffle.length, );
 	questions_shuffle.forEach(q => q.style.display = "none")
@@ -18020,12 +18041,20 @@
 
 
 	// ### Maze  
+	const removeList_maze = ['P4 : Q4', 'P4 : Q8', 'P4 : Q10', 'P4 : Q21', 'P4 : Q24', 'P4 : Q30', 'P4 : Q42', 'P4 : Q46', 'P4 : Q57', 'P4 : Q68', 'P4 : Q80', 'P4 : Q81', 'P4 : Q82', 'P4 : Q86'];
+	remove_elements(removeList_maze, questions_maze);
+	questions_maze = Array.from(document.querySelectorAll(".question_maze"))
+	// questions_maze.forEach(element => {console.log( element.querySelector("input[type='radio']").name )})
 	const q_numbers_maze = selectRandomNumbers(1, 0, questions_maze.length );
 	console.log(q_numbers_maze, questions_maze.length, );
 	questions_maze.forEach(q => q.style.display = "none")
 	q_numbers_maze.forEach(i => questions_maze[i].style.display = "block")
 
 	// ### ROBO  
+	const removeList_robo = ['P3 : Q2', 	'P3 : Q3', 	'P3 : Q7', 'P3 : Q40', 	'P3 : Q44', 'P3 : Q61', 'P3 : Q66', 'P3 : Q80', 'P3 : Q86', 'P3 : Q95', 'P3 : Q99', 'P3 : Q100']
+	remove_elements(removeList_robo, questions_robo);
+	questions_robo = Array.from(document.querySelectorAll(".question_robo"))
+	questions_robo.forEach(element => {console.log( element.querySelector("input[type='radio']").name )})
 	const q_numbers_robo = selectRandomNumbers(1, 0, questions_robo.length );
 	console.log(q_numbers_robo, questions_robo.length, );
 	questions_robo.forEach(q => q.style.display = "none")
