@@ -7,10 +7,10 @@ blockworld = False
 blockworld_all = False         
 shuffle_all = False         
 robo_all = False   
-maze_all = True      
+maze_all = False 
   
 
-accuracy_shuffle = False
+accuracy_human = True 
 
 
 if shuffle:
@@ -157,31 +157,85 @@ if blockworld:
         f.write(template)
     
     
-if accuracy_shuffle:
-    df_humans = pd.read_csv('accuracy_shuffle.csv')
+if accuracy_human:
+    df_humans_shuffle = pd.read_csv('accuracy_shuffle.csv')
+    df_humans_all = pd.read_csv('ALL PUZZELS.csv')
     
-    root='shuffle_e_final'
+    # robo_map.txt
+    # maze_map.txt
     solutions = {}
-    correct = 0 
-    total = 0 
-    total_answered = {}
-    for file_index in range(1,101):
-        if file_index in [2, 42, 76, 84 ]:continue
-        guessed = df_humans[f"Q{file_index}"].dropna()
-        if len(guessed) == 0:continue 
-        print(file_index)
-        q_a = f"text_q{file_index}.txt"
-        q_a = os.path.join(root, q_a)
-        with open(q_a, "r") as f:
-            Lines = f.readlines()
-            for i,e in enumerate(Lines):
-                if 'Correct Answer:' not in e:
-                    continue 
-                solutions[file_index] = e.split('Correct Answer: ')[1]
-                answer = solutions[file_index] 
-            total_answered[file_index] = len(guessed)
-            correct += (guessed == answer).sum()
-            total += len(guessed)
+    # for root in ['shuffle_e_final', 'robovqa_correct_finl', 'paths_correct', 'blockworld_e_final']:
+    for root in ['robovqa_correct_finl', 'paths_correct', 'blockworld_e_final']:
+        correct = 0 
+        total = 0 
+        total_answered = {}
+        if "shuffle" in root:
+            for file_index in range(1,101):
+                # if file_index in [2, 42, 76, 84 ]:continue
+                guessed = df_humans_shuffle[f"Q{file_index}"].dropna()
+                guessed2 = df_humans_all[f'P2 : Q{file_index}'].dropna()
+
+                guessed = pd.concat([guessed, guessed2])
+                if len(guessed) == 0:continue 
+                
+                q_a = f"text_q{file_index}.txt"
+                q_a = os.path.join(root, q_a)
+                with open(q_a, "r") as f:
+                    Lines = f.readlines()
+                    for i,e in enumerate(Lines):
+                        if 'Correct Answer:' not in e:
+                            continue 
+                        solutions[file_index] = e.split('Correct Answer: ')[1]
+                        answer = solutions[file_index] 
+                    total_answered[file_index] = len(guessed)
+                    correct += (guessed == answer).sum()
+                    total += len(guessed)
+        elif "robovqa_correct_finl" in root:
+            robo_map = {}
+            inv_robo_map = {}
+            with open('robo_map.txt', 'r') as f:
+                Lines = f.readlines()
+                Lines = [e.strip() for e in Lines]
+                Lines = [e.split("/") for e in Lines]
+                Lines = [(e[0].split(":")[1].strip(),e[1].replace(")", "").strip()) for e in Lines]
+                robo_map = {x:y for x,y in Lines}
+            inv_robo_map = {v:k for k,v in robo_map.items()}
+            import pdb
+            pdb.set_trace()
+            [e for e in df_humans_all.columns if 'P3' in e]
+            
+            for file_index in range(1,301):
+                
+                
+                guessed2 = df_humans_all[f'P2 : Q{file_index}'].dropna()
+
+                guessed = pd.concat([guessed, guessed2])
+                if len(guessed) == 0:continue 
+                
+                q_a = f"text_q{file_index}.txt"
+                q_a = os.path.join(root, q_a)
+                with open(q_a, "r") as f:
+                    Lines = f.readlines()
+                    for i,e in enumerate(Lines):
+                        if 'Correct Answer:' not in e:
+                            continue 
+                        solutions[file_index] = e.split('Correct Answer: ')[1]
+                        answer = solutions[file_index] 
+                    total_answered[file_index] = len(guessed)
+                    correct += (guessed == answer).sum()
+                    total += len(guessed)
+
+        import pdb
+        pdb.set_trace()
+        
+                
+            
+            
+        
+        
+        
+        
+        
     print(correct, total,  correct / total)
     print(len(total_answered), total_answered)
     # 23 48 0.4791666666666667
