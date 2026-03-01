@@ -163,23 +163,30 @@ if accuracy_human:
     
     # robo_map.txt
     # maze_map.txt
-    solutions = {}
-    # for root in ['shuffle_e_final', 'robovqa_correct_finl', 'paths_correct', 'blockworld_e_final']:
-    for root in ['robovqa_correct_finl', 'paths_correct', 'blockworld_e_final']:
+    debug_mode = False 
+    for root in ['shuffle_e_final', 'robovqa_correct_finl', 'paths_correct', 'blockworld_e_final']:
+    # for root in ['robovqa_correct_finl', 'shuffle_e_final', 'paths_correct', 'blockworld_e_final']:
+    # for root in ['blockworld_e_final']:
+        solutions = {}
         correct = 0 
         total = 0 
+        unique = 0
         total_answered = {}
+        solved = set()
         if "shuffle" in root:
             for file_index in range(1,101):
+                q_official_name = f'P2 : Q{file_index}'
                 # if file_index in [2, 42, 76, 84 ]:continue
                 guessed = df_humans_shuffle[f"Q{file_index}"].dropna()
-                guessed2 = df_humans_all[f'P2 : Q{file_index}'].dropna()
+                guessed2 = df_humans_all[ q_official_name ].dropna()
 
                 guessed = pd.concat([guessed, guessed2])
                 if len(guessed) == 0:continue 
                 
                 q_a = f"text_q{file_index}.txt"
+                solved.add(q_official_name)
                 q_a = os.path.join(root, q_a)
+                unique += 1
                 with open(q_a, "r") as f:
                     Lines = f.readlines()
                     for i,e in enumerate(Lines):
@@ -200,44 +207,95 @@ if accuracy_human:
                 Lines = [(e[0].split(":")[1].strip(),e[1].replace(")", "").strip()) for e in Lines]
                 robo_map = {x:y for x,y in Lines}
             inv_robo_map = {v:k for k,v in robo_map.items()}
-            import pdb
-            pdb.set_trace()
-            [e for e in df_humans_all.columns if 'P3' in e]
             
-            for file_index in range(1,301):
-                
-                
-                guessed2 = df_humans_all[f'P2 : Q{file_index}'].dropna()
-
-                guessed = pd.concat([guessed, guessed2])
+            files_ids = [str(e) for e in range(1,101)]
+            for file_index in files_ids:
+                q_official_name = f'P3 : Q{file_index}'
+                guessed = df_humans_all[ q_official_name ].dropna()
                 if len(guessed) == 0:continue 
-                
-                q_a = f"text_q{file_index}.txt"
+                # print(guessed)
+                real_file_index = inv_robo_map[file_index]
+
+                q_a = f"text_q{real_file_index}.txt"
                 q_a = os.path.join(root, q_a)
+                if debug_mode:print("---")
+                unique += 1
+                solved.add(q_official_name)
                 with open(q_a, "r") as f:
                     Lines = f.readlines()
                     for i,e in enumerate(Lines):
                         if 'Correct Answer:' not in e:
                             continue 
-                        solutions[file_index] = e.split('Correct Answer: ')[1]
-                        answer = solutions[file_index] 
+                        answer = e.split('correct answer is ')[1]
+                        answer = answer.strip().replace(".","")
+                        if debug_mode:print(e, answer)
+                        solutions[real_file_index] = answer
+                    total_answered[file_index] = len(guessed)
+                    correct += (guessed == answer).sum()
+                    total += len(guessed)
+        elif "paths_correct" in root:
+            maze_map = {}
+            inv_maze_map = {}
+            
+            with open('maze_map.txt', 'r') as f:
+                Lines = f.readlines()
+                Lines = [e.strip() for e in Lines]
+                Lines = [e.split("/") for e in Lines]
+                Lines = [(e[0].split(":")[1].strip(),e[1].replace(")", "").strip()) for e in Lines]
+                maze_map = {x:y for x,y in Lines}
+            inv_maze_map = {v:k for k,v in maze_map.items()}
+            
+            files_ids = [str(e) for e in range(1,101)]
+            for file_index in files_ids:
+                q_official_name = f'P4 : Q{file_index}'
+                guessed = df_humans_all[ q_official_name ].dropna()
+                if len(guessed) == 0:continue 
+                real_file_index = inv_maze_map[file_index]
+                q_a = f"text_q{real_file_index}.txt"
+                q_a = os.path.join(root, q_a)
+                if debug_mode:print("----")
+                unique += 1
+                solved.add(q_official_name)
+                with open(q_a, "r") as f:
+                    Lines = f.readlines()
+                    for i,e in enumerate(Lines):
+                        if 'Correct Answer:' not in e:
+                            continue 
+                        answer = e.split('Correct Answer:')[1]
+                        answer = answer.strip().replace(".","")
+                        if debug_mode:print(e, answer)
+                        solutions[real_file_index] = answer
+                    total_answered[file_index] = len(guessed)
+                    correct += (guessed == answer).sum()
+                    total += len(guessed)
+        elif "blockworld_e_final" in root:
+            files_ids = [str(e) for e in range(1,101)]
+            for file_index in files_ids:
+                q_official_name = f'P1 : Q{file_index}'
+                guessed = df_humans_all[ q_official_name ].dropna()
+                if len(guessed) == 0:continue 
+                # print(guessed)
+                q_a = f"text_q{file_index}.txt"
+                q_a = os.path.join(root, q_a)
+                if debug_mode:print("----")
+                unique += 1
+                solved.add(q_official_name)
+                with open(q_a, "r") as f:
+                    Lines = f.readlines()
+                    for i,e in enumerate(Lines):
+                        if 'Correct Answer:' not in e:
+                            continue 
+                        answer = e.split('Correct Answer:')[1]
+                        answer = answer.strip().replace(".","")
+                        if debug_mode:print(e, answer)
+                        solutions[file_index] = answer
                     total_answered[file_index] = len(guessed)
                     correct += (guessed == answer).sum()
                     total += len(guessed)
 
-        import pdb
-        pdb.set_trace()
-        
-                
-            
-            
-        
-        
-        
-        
-        
-    print(correct, total,  correct / total)
-    print(len(total_answered), total_answered)
+        print(f"{root:<30} Correct = {correct},\t\tTotal = {total},\t\tUnique = {unique} \t\tAcc = {(correct / total) * 100:.1f}%")
+        print(sorted(solved, key=lambda x : float(x.split(":")[1].replace("Q", "").strip()) ))
+        # print(len(total_answered), total_answered)
     # 23 48 0.4791666666666667
     # {3: 4, 5: 1, 12: 1, 13: 2, 14: 1, 16: 2, 18: 1, 25: 1, 26: 2, 28: 3, 32: 2, 33: 1, 34: 2, 35: 1, 37: 1, 44: 1, 47: 1, 49: 2, 54: 1, 55: 1, 56: 1, 58: 3, 59: 2, 69: 1, 72: 1, 79: 1, 82: 1, 88: 1, 89: 1, 91: 1, 94: 1, 96: 1, 97: 1, 98: 1}
     
