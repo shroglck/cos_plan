@@ -164,6 +164,11 @@ if accuracy_human:
     # robo_map.txt
     # maze_map.txt
     debug_mode = False 
+    overall_total_entries = len(df_humans_shuffle) +  len(df_humans_all)
+    
+    import pdb
+    pdb.set_trace()
+
     for root in ['shuffle_e_final', 'robovqa_correct_finl', 'paths_correct', 'blockworld_e_final']:
     # for root in ['robovqa_correct_finl', 'shuffle_e_final', 'paths_correct', 'blockworld_e_final']:
     # for root in ['blockworld_e_final']:
@@ -293,6 +298,7 @@ if accuracy_human:
                     correct += (guessed == answer).sum()
                     total += len(guessed)
 
+        
         print(f"{root:<30} Correct = {correct},\t\tTotal = {total},\t\tUnique = {unique} \t\tAcc = {(correct / total) * 100:.1f}%")
         print(sorted(solved, key=lambda x : float(x.split(":")[1].replace("Q", "").strip()) ))
         # print(len(total_answered), total_answered)
