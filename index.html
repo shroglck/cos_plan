@@ -43,6 +43,10 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- <link rel="stylesheet" href="https://jsdelivr.net"> -->
+  <!-- <link rel="stylesheet" href="https://cloudflare.com"> -->
+  
 </head>
 <body>
 
@@ -91,12 +95,9 @@
                   
                       <!-- Status -->
                       <span class="author-block">
-                          <b style="color:red;">Under Review</b>
+                          <b style="color:red;">ECCV'26</b>
                       </span>
                       <br>
-                      <span class="author-block blink" >
-                          <b style="color:rgb(23, 58, 255);">Major Updates & Results Coming Soon...</b>
-                      </span>
                       
                   </div>
                   <div class="column has-text-centered">
@@ -105,26 +106,34 @@
                     
                     
                     <span class="link-block">
-                      <a href="https://shroglck.github.io/cos_plan/Forms/all_puzzles.html" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
+                      <a href="https://shroglck.github.io/cos_plan/Forms/all_puzzles.html" target="_blank" class="external-link button is-normal is-rounded is-dark">
                         <span class="icon"><i class="fas fa-user"></i></span>
                         <span><stong>Try CoSPlan Yourself</stong></span>
                       </a>
                     </span>
                     <br>
+
                     <!-- Paper -->
                     <span class="link-block">
-                      <a href="#" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
+                      <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>Paper (Coming Soon)</span>
                       </a>
                     </span>
 
+                    <!-- Paper -->
+                    <span class="link-block">
+                      <a href="https://huggingface.co/datasets/shrg7/COSPLAN" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">🤗</span>
+                        <span>Dataset</span>
+                      </a>
+                    </span>
+
+                    
+
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/shroglck/CosPlan" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://github.com/shroglck/CosPlan" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -140,12 +149,12 @@
                   </a>
                 </span>
                 
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxivlens.com/PaperView/Details/cosplan-corrective-sequential-planning-via-scene-graph-incremental-updates-2337-5f5ebd8c" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-code"></i></span>
                     <span>arXivlens (Explain)</span>
                   </a>
-                </span>
+                </span> -->
                 
 
                 
@@ -268,10 +277,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large-scale Vision-Language Models (VLMs) exhibit impressive complex reasoning capabilities but remain largely unexplored in <em>'visual sequential planning'</em>, i.e., executing multi-step actions towards a goal. 
-            Additionally, practical sequential planning often involves non-optimal (erroneous) steps, challenging VLMs to detect and correct such steps. We propose <b>Corrective Sequential Planning Benchmark (CoSPlan)</b> to evaluate VLMs in error-prone, vision-based sequential planning tasks across 4 domains: maze navigation, block re-arrangement, image reconstruction, and object re-organization. 
-            CoSPlan assesses two key abilities: <em>Error Detection</em> (identifying non-optimal action) and <em>Step Completion</em> (correcting and completing action sequences to reach the goal). Despite using state-of-the-art reasoning techniques such as Chain-of-Thought and Scene Graphs, VLMs (e.g. Intern-VLM and Qwen2) struggle on CoSPlan, failing to leverage contextual cues to reach goals. 
-            Addressing this, we propose a novel training-free method, <b>Scene Graph Incremental updates (SGI)</b>, which introduces intermediate reasoning steps between the initial and goal states. SGI helps VLMs reason about sequences, yielding an average performance gain of ~5.2%. In addition to enhancing reliability in corrective sequential planning, SGI generalizes to traditional planning tasks such as PlanBench and VQA. Code and dataset will be made public.
+            Vision Language Models (VLMs) have shown promising planning capabilities, yet their success remains confined to the text domain, leaving visual decision-making relatively underexplored. Addressing this
+            gap, we introduce Corrective Sequence Planning (<strong>CoSPlan</strong>) benchmark, where VLMs must plan a sequence of visual actions from an initial
+            scene to a target scene. <strong>CoSPlan</strong> evaluates models on their ability to imagine and execute a coherent set of visual steps required to reach the goal (Step Completion). To prevent any shortcuts that simply describe the final scene, we introduce an erroneous action in decision making,
+            which must be detected (Error Detection) and corrected to reach the goal, enabling a deeper understanding of the task. <strong>CoSPlan</strong> spans across 4 tasks: maze navigation, block re-arrangement, image reconstruction, and object re-organization. Despite using advanced reasoning strategies such as Chain-of-Thought and Scene Graphs, VLMs struggle on <strong>CoSPlan</strong>, while still showing promising performance in the text domain. Addressing
+            this, we propose Scene Graph Incremental updates (SGI), a novel training-free method to transform images into ‘textual’ scene graphs, enabling step-by-step reasoning through iterative scene graph refinement.
+            SGI yields an average of ~4.4% ↑ on CoSPlan w/ generalization on
+            PlanBench and VQA. Link for solving puzzles above.
+            <!-- Large-scale Vision-Language Models (VLMs) exhibit impressive complex reasoning capabilities but remain largely unexplored in <em>'visual sequential planning'</em>, i.e., executing multi-step actions towards a goal.  -->
+            <!-- Additionally, practical sequential planning often involves non-optimal (erroneous) steps, challenging VLMs to detect and correct such steps. We propose <b>Corrective Sequential Planning Benchmark (CoSPlan)</b> to evaluate VLMs in error-prone, vision-based sequential planning tasks across 4 domains: maze navigation, block re-arrangement, image reconstruction, and object re-organization.  -->
+            <!-- CoSPlan assesses two key abilities: <em>Error Detection</em> (identifying non-optimal action) and <em>Step Completion</em> (correcting and completing action sequences to reach the goal). Despite using state-of-the-art reasoning techniques such as Chain-of-Thought and Scene Graphs, VLMs (e.g. Intern-VLM and Qwen2) struggle on CoSPlan, failing to leverage contextual cues to reach goals.  -->
+            <!-- Addressing this, we propose a novel training-free method, <b>Scene Graph Incremental updates (SGI)</b>, which introduces intermediate reasoning steps between the initial and goal states. SGI helps VLMs reason about sequences, yielding an average performance gain of ~5.2%. In addition to enhancing reliability in corrective sequential planning, SGI generalizes to traditional planning tasks such as PlanBench and VQA. Code and dataset will be made public. -->
           </p>
         </div>
       </div>
