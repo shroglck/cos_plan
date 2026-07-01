@@ -317,26 +317,83 @@
             </ul>
           </p>
         </div>
+        <div class="content">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Task</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Initial Context <br>(# of already performed actions)</th>
+                <th>Remaining Steps <br>(#remaining steps to reach goal)</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maze-E</td>
+                <td>Navigation</td>
+                <td>Path Planning</td>
+                <td>5000</td>
+                <td>2.0</td>
+                <td>4.6</td>
+                <td>Synthetic</td>
+              </tr>
+              <tr>
+                <td>Blocks-World-E</td>
+                <td>Re-arrange</td>
+                <td>Blocks</td>
+                <td>5000</td>
+                <td>2.0</td>
+                <td>3.8</td>
+                <td>Synthetic</td>
+              </tr>
+              <tr>
+                <td>Shuffle-E</td>
+                <td>Re-construct</td>
+                <td>Puzzle</td>
+                <td>1000</td>
+                <td>3.7</td>
+                <td>7.1</td>
+                <td>ImageNet</td>
+              </tr>
+              <tr>
+                <td>Robo-VQA-E</td>
+                <td>Re-organize</td>
+                <td>Real-world</td>
+                <td>350</td>
+                <td>5.5</td>
+                <td>4.1</td>
+                <td>ROM</td>
+              </tr>
+            </tbody>
+            <caption>Dataset Stats</caption>
+          </table>
+        </div>
+
         <div class="container has-text-centered">
           <div class="figure-grid4">
             <div class="figure-item">
               <img src="static/images/Maze-E.jpg" alt="Maze E Navigating">
-              <div class="figure-caption"><b>(a) Maze E (Navigating):</b> &rarr; denotes movement</div>
+              <div class="figure-caption"><b>(a) Maze E (Navigating):</b> Only navigating (→, ↑, ←, ↓) from
+green to blue cell, avoiding cells marked in red</div>
             </div>
 
             <div class="figure-item">
               <img src="static/images/Blocks-World-E.jpg" alt="Blocks World Rearrangement">
-              <div class="figure-caption"><b>(b) Blocks World (Rearrangement):</b> X from (a) &rarr;(b) means "move box number X from column (a) to (b)"  </div>
+              <div class="figure-caption"><b>(b) Blocks World (Rearrangement):</b> X from (a) → (b) rearranges block ‘X’ from column ‘a’ to column ‘b’. </div>
             </div>
 
             <div class="figure-item">
               <img src="static/images/Shuffle-E.jpg" alt="Shuffle E Reconstruction">
-              <div class="figure-caption"><b>(c) Shuffle E (Reconstruction):</b> &hArr; indicate swap of patches </div>
+              <div class="figure-caption"><b>(c) Shuffle E (Reconstruction):</b> Re-constructing target image Ig
+by swapping (↔) image patches. </div>
             </div>
 
             <div class="figure-item">
               <img src="static/images/Robo-VQA-E.jpg" alt="Robo VQA Reorganization">
-              <div class="figure-caption"><b>(d) Robo VQA (Reorganization): </b> Real world tasks </div>
+              <div class="figure-caption"><b>(d) Robo VQA (Reorganization): </b> Re-organizing real-world objects </div>
             </div>
           </div>
           <br>
