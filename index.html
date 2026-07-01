@@ -467,9 +467,24 @@ by swapping (↔) image patches. </div>
       <div class="column is-four-fifths">
         <h2 class="title is-3">Solution : Scene Graph Incremental Update (SGI)</h2>
         <div class="content has-text-justified">
+          <!-- <p> -->
+            <!-- Addressing the limitations of current VLMs in tracking evolving scenes, we propose <b><u>S</u>cene <u>G</u>raph <u>I</u>ncremental updates (SGI)</b>. This novel <u>training-free</u> method refines Scene Graphs <u>step-by-step</u> for each action, generating intermediate states. -->
+          <!-- </p> -->
+
           <p>
-            Addressing the limitations of current VLMs in tracking evolving scenes, we propose <b><u>S</u>cene <u>G</u>raph <u>I</u>ncremental updates (SGI)</b>. This novel <u>training-free</u> method refines Scene Graphs <u>step-by-step</u> for each action, generating intermediate states.
+            <strong>Motivation: </strong> With only initial and final images, models internally interpolate missing states (CoT & SG), a process they struggle in the
+visual domain, even though they perform with relative ease in the text domain
           </p>
+
+          <p>
+            <strong>Solution: </strong> We leverage SG to transform visual images into textual representations, and apply an iterative step-by-step reasoning on text space instead of the visual domain. Instead of reasoning within a single
+static scene, SGI explicitly derives next-time-frame scene graphs as actions unfold in evolving scenes (See Gif below). This incremental formulation bridges the gap between the initial and final states via explicit intermediate states, and decomposing reasoning into smaller transitions, thereby improving corrective sequence planning and error detection. 
+          </p>
+          
+          
+          
+          
+          
           <div class="container has-text-centered">
             <img src="static/images/sgi.gif" style="max-width: 50%; height: auto;">
           </div>
@@ -526,7 +541,7 @@ by swapping (↔) image patches. </div>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Intern-VLM</strong></td>
+                <td><strong>Intern-VLM - 2</strong></td>
                 <td>25.1</td>
                 <td style="background-color: #e8f5e9;"><strong>32.1</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+7.0)</span></td>
                 <td>23.4</td>
@@ -536,6 +551,19 @@ by swapping (↔) image patches. </div>
                 <td>18.9</td>
                 <td style="background-color: #e8f5e9;"><strong>29.2</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+10.3)</span></td>
               </tr>
+
+              <tr>
+                <td><strong>Intern-VLM - 3</strong></td>
+                <td>31.4</td>
+                <td style="background-color: #e8f5e9;"><strong>33.7</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+2.3)</span></td>
+                <td>27.1</td>
+                <td style="background-color: #e8f5e9;"><strong>28.6</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+1.5)</span></td>
+                <td>50.1</td>
+                <td style="background-color: #e8f5e9;"><strong>54.8</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+4.7)</span></td>
+                <td>29.4</td>
+                <td style="background-color: #e8f5e9;"><strong>30.6</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+1.2)</span></td>
+              </tr>
+
               <tr>
                 <td><strong>GPT-4o</strong></td>
                 <td>52.2</td>
@@ -570,7 +598,7 @@ by swapping (↔) image patches. </div>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Intern-VLM</strong></td>
+                <td><strong>Intern-VLM - 2 </strong></td>
                 <td>26.1</td>
                 <td style="background-color: #e8f5e9;"><strong>31.5</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+5.4)</span></td>
                 <td>33.4</td>
@@ -578,6 +606,17 @@ by swapping (↔) image patches. </div>
                 <td>37.3</td>
                 <td style="background-color: #e8f5e9;"><strong>42.9</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+5.6)</span></td>
               </tr>
+
+              <tr>
+                <td><strong>Intern-VLM - 3 </strong></td>
+                <td>28.1</td>
+                <td style="background-color: #e8f5e9;"><strong>29.5</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+1.4)</span></td>
+                <td>35.1</td>
+                <td style="background-color: #e8f5e9;"><strong>36.3</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+1.2)</span></td>
+                <td>44.3</td>
+                <td style="background-color: #e8f5e9;"><strong>45.1</strong> <span style="color: #2e7d32; font-size: 0.85em;">(+0.8)</span></td>
+              </tr>
+
               <tr>
                 <td><strong>GPT-4o</strong></td>
                 <td>44.2</td>
@@ -589,7 +628,7 @@ by swapping (↔) image patches. </div>
               </tr>
             </tbody>
           </table>
-          <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">Average improvement with SGI: ~5.2% across all tasks</p>
+          <!-- <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">Average improvement with SGI: ~5.2% across all tasks</p> -->
         </div>
       </div>
     </div>
@@ -727,5 +766,5 @@ by swapping (↔) image patches. </div>
 
 
 
-  </body>
-  </html>
+</body>
+</html>
