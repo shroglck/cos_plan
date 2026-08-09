@@ -19,7 +19,7 @@
   <meta name="twitter:image" content="static/images/logo.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Vision Language Models, Sequential Planning, Scene Graphs, CVPR">
+  <meta name="keywords" content="Vision Language Models, Sequential Planning, Scene Graphs, ECCV">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -189,8 +189,35 @@
               </tr>
             </thead>
             <tbody>
+              <tr style="font-style: italic; opacity: 0.85;">
+                <td>—</td>
+                <td>Human (ceiling)</td>
+                <td>42.1</td>
+                <td>53.7</td>
+                <td>95.7</td>
+                <td>81.8</td>
+                <td><strong>68.3</strong></td>
+              </tr>
               <tr class="rank-1">
                 <td>1</td>
+                <td>Gemini-3-pro</td>
+                <td>67.3</td>
+                <td>61.6</td>
+                <td>70.4</td>
+                <td>71.3</td>
+                <td><strong>67.7</strong></td>
+              </tr>
+              <tr class="rank-2">
+                <td>2</td>
+                <td>GPT-5.1</td>
+                <td>51.3</td>
+                <td>33.4</td>
+                <td>48.3</td>
+                <td>52.3</td>
+                <td><strong>46.3</strong></td>
+              </tr>
+              <tr class="rank-3">
+                <td>3</td>
                 <td>GPT-4o</td>
                 <td>52.2</td>
                 <td>30.1</td>
@@ -198,17 +225,35 @@
                 <td>54.3</td>
                 <td><strong>45.7</strong></td>
               </tr>
-              <tr class="rank-2">
-                <td>2</td>
-                <td>Intern-VLM</td>
+              <tr>
+                <td>4</td>
+                <td>Intern-VLM 3</td>
+                <td>31.4</td>
+                <td>27.1</td>
+                <td>50.1</td>
+                <td>29.4</td>
+                <td><strong>34.5</strong></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Qwen3-VL-8B</td>
+                <td>23.4</td>
+                <td>30.3</td>
+                <td>36.2</td>
+                <td>28.3</td>
+                <td><strong>29.6</strong></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Intern-VLM 2</td>
                 <td>25.1</td>
                 <td>23.4</td>
                 <td>41.2</td>
                 <td>18.9</td>
                 <td><strong>27.1</strong></td>
               </tr>
-              <tr class="rank-3">
-                <td>3</td>
+              <tr>
+                <td>7</td>
                 <td>CoG-VLM</td>
                 <td>21.5</td>
                 <td>23.7</td>
@@ -217,7 +262,7 @@
                 <td><strong>24.6</strong></td>
               </tr>
               <tr>
-                <td>4</td>
+                <td>8</td>
                 <td>Janus-pro-7B</td>
                 <td>21.3</td>
                 <td>23.5</td>
@@ -226,7 +271,7 @@
                 <td><strong>22.9</strong></td>
               </tr>
               <tr>
-                <td>5</td>
+                <td>9</td>
                 <td>Qwen2-VL-8B</td>
                 <td>18.9</td>
                 <td>25.1</td>
@@ -235,7 +280,16 @@
                 <td><strong>22.8</strong></td>
               </tr>
               <tr>
-                <td>6</td>
+                <td>10</td>
+                <td>Llama3-8B</td>
+                <td>19.1</td>
+                <td>18.5</td>
+                <td>21.3</td>
+                <td>23.2</td>
+                <td><strong>20.5</strong></td>
+              </tr>
+              <tr style="font-style: italic; opacity: 0.85;">
+                <td>—</td>
                 <td>Random</td>
                 <td>20</td>
                 <td>20</td>
@@ -244,7 +298,7 @@
                 <td><strong>20.0</strong></td>
               </tr>
             </tbody>
-            <caption>Models ranked by average Step Completion accuracy across all CoSPlan tasks (using Scene Graph method)</caption>
+            <caption>Models ranked by average Step Completion accuracy across all CoSPlan tasks (Scene Graph method; values from paper Tab. 3). Human and Random shown as reference bounds. GPT-4o, GPT-5.1, and Gemini-3-pro are evaluated for limited experiments.</caption>
           </table>
         </div>
       </div>
@@ -315,6 +369,9 @@
                 <li><b>Shuffle-E:</b> Reconstructing shuffled image tiles to form the original image.</li>
                 <li><b>Robo-VQA-E:</b> Re-organizing real-world objects based on instructions.</li>
             </ul>
+          </p>
+          <p>
+            We evaluate a broad set of VLMs on CoSPlan &mdash; <b>GPT-5.1</b>, <b>GPT-4o</b>, <b>Gemini-3-pro</b>, CoG-VLM, Intern-VLM 2, Intern-VLM 3, Janus-Pro-7B, Llama3-8B, Qwen2-VL-8B, and Qwen3-VL-8B &mdash; under Vanilla input as well as two enhanced reasoning strategies, <u>Chain-of-Thought (CoT)</u> and <u>Scene Graphs (SG)</u>.
           </p>
         </div>
         <div class="content">
@@ -478,7 +535,7 @@ visual domain, even though they perform with relative ease in the text domain
 
           <p>
             <strong>Solution: </strong> We leverage SG to transform visual images into textual representations, and apply an iterative step-by-step reasoning on text space instead of the visual domain. Instead of reasoning within a single
-static scene, SGI explicitly derives next-time-frame scene graphs as actions unfold in evolving scenes (See Gif below). This incremental formulation bridges the gap between the initial and final states via explicit intermediate states, and decomposing reasoning into smaller transitions, thereby improving corrective sequence planning and error detection. 
+static scene, SGI explicitly derives next-time-frame scene graphs as actions unfold in evolving scenes (See Gif below). This incremental formulation bridges the gap between the initial and final states via explicit intermediate states, and decomposing reasoning into smaller transitions, thereby improving corrective sequence planning and error detection. The reasoning hierarchy can be viewed as CoT &sube; SG &sube; SGI.
           </p>
           
           
@@ -628,7 +685,7 @@ static scene, SGI explicitly derives next-time-frame scene graphs as actions unf
               </tr>
             </tbody>
           </table>
-          <!-- <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">Average improvement with SGI: ~5.2% across all tasks</p> -->
+          <p class="has-text-centered" style="margin-top: 1.5rem;">SGI consistently outperforms vanilla SG across all tasks, with average Step Completion gains of <strong>+4.4%</strong> (up to +10.3% for Intern-VLM 2, +4.8% for Intern-VLM 3, +10.0% for GPT-4o), and Error Detection gains up to +13.2%. On Blocks-World-E, <strong>Gemini-3-pro</strong> improves from 67% (CoT) &rarr; 70% (SG) &rarr; 71.5% (SGI). SGI also reduces cheating instances, e.g. Intern-VLM 2 (43% &rarr; 39%) and Intern-VLM 3 (41% &rarr; 35%).</p>
         </div>
       </div>
     </div>
