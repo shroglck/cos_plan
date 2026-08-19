@@ -1,16 +1,16 @@
 import os 
 import pandas as pd 
 
-shuffle=False 
+shuffle=False   
 blockworld = False
 
-blockworld_all = False         
-shuffle_all = False         
-robo_all = False   
+shuffle_all = True 
+robo_all = False 
+blockworld_all = False   
 maze_all = False 
   
 
-accuracy_human = True 
+accuracy_human = False  
 
 
 if shuffle:
@@ -24,8 +24,7 @@ if shuffle:
         q_a = f"text_q{file_index}.txt"
         q_a = os.path.join(root, q_a)
 
-        template += f"""
-            <div class="question">
+        template += f"""\t\t<div class="question">
                 <div class="already_done">
                     <img src='shuffle_e_final/{image}' style="width: 100%;">
                     <p>Already performed Actions (q1: {file_index})</p>
@@ -34,6 +33,8 @@ if shuffle:
         already_found = None
         with open(q_a, "r") as f:
             Lines = f.readlines()
+            correct_answer  = Lines[-1].replace("Correct Answer:", "")
+            correct_answer = correct_answer.strip()
             for i,e in enumerate(Lines):
                 if 'Options:' in e:break 
                 if "Following steps have already been taken" in e:
@@ -54,6 +55,7 @@ if shuffle:
 
             option_found = False 
             i+=1
+            correct_found = False 
             while i < len(Lines):
                 line = Lines[i].strip()
                 if 'Select the correct' in line: break 
@@ -67,9 +69,9 @@ if shuffle:
                     id = f"q{file_index}{option}"
                     
                     template += f'\t\t\t<input type="radio" id="{id}" name="Q{file_index}" value="{option}">\n'
-                    template += f'\t\t\t<label for="{id}"> Option {option}\n'
+                    template += f'\t\t\t<label for="{id}" correct="{correct_answer == option}"> Option {option}\n'
                     template += '\t\t\t\t<ul>\n'
-                    
+                    correct_found = correct_found or correct_answer == option
                 else:
                     option_found = True 
                     template += f'\t\t\t\t\t<li>{line}</li>\n'
@@ -77,6 +79,8 @@ if shuffle:
             
             template += '\t\t\t\t</ul>\n\t\t\t</label>\n'
             template += '\t\t</div>'
+            assert "Correct Answer:" in Lines[-1]
+            assert correct_found, f"Correct answer not found for {q_a}"
             # print(template)
         
         template += '\n'
@@ -359,6 +363,15 @@ if maze_all:
 
         with open(q_a, "r") as f:
             Lines = f.readlines()
+            correct_answer_line  = Lines[-1]
+            if correct_answer_line == '\n':
+                correct_answer_line  = Lines[-2]
+            
+            correct_answer = correct_answer_line.split("Correct Answer:")[-1]
+            correct_answer = correct_answer.strip()
+            correct_answer = correct_answer.replace(".", "")
+            assert "Correct Answer:" in correct_answer_line, f"{correct_answer_line}"
+            
             for i,e in enumerate(Lines):
                 e = e.strip()
                 if 'already made along the path' in e:
@@ -375,6 +388,7 @@ if maze_all:
 
             # print(template)
             option_found = False 
+            correct_found = False 
             i+=1
             while i < len(Lines):
                 line = Lines[i].strip()
@@ -410,12 +424,14 @@ if maze_all:
                 for option in ['A', 'B', 'C', 'D']:
                     id = f"q4:{option_counter}{option}"
                     template += f'\t\t\t<input type="radio" id="{id}" name="{Q_index}" value="{option}">\n'
-                    template += f'\t\t\t<label for="{id}"> Option {option}\n'
+                    template += f'\t\t\t<label for="{id}" correct="{correct_answer == option}"> Option {option}\n'
                     template += '\t\t\t\t<ul>'
                     template = conver_string_into_action(option_dict[option], template, padding='\t\t\t\t\t')
                     template += '\t\t\t\t</ul>\n\t\t\t</label>\n'
+                    correct_found = correct_found or correct_answer == option
                 break 
             template += '\t\t</div>\n'
+            assert correct_found, f"Correct answer not found for {q_a}"
             # print(template)
     template += '\t</div>'      
     with open('html_code_for_maze', "w") as f:
@@ -452,6 +468,15 @@ if blockworld_all:
         already_found = None
         with open(q_a, "r") as f:
             Lines = f.readlines()
+            correct_answer_line  = Lines[-1]
+            if correct_answer_line == '\n':
+                correct_answer_line  = Lines[-2]
+            
+            correct_answer = correct_answer_line.split("Correct Answer:")[-1]
+            correct_answer = correct_answer.strip()
+            correct_answer = correct_answer.replace(".", "")
+            assert "Correct Answer:" in correct_answer_line, f"{correct_answer_line}"
+                        
             for i,e in enumerate(Lines):
                 e = e.strip()
                 if '[Target Configuration]' in e:break 
@@ -471,6 +496,7 @@ if blockworld_all:
             assert already_found == True 
 
             option_found = False 
+            correct_found = False 
             i+=1
             Q_index = f"P1 : Q{file_index}"
             while i < len(Lines):
@@ -484,18 +510,19 @@ if blockworld_all:
                     option = option.replace(":", "")
                     id = f"q1:{file_index}{option}"
                     template += f'\t\t\t<input type="radio" id="{id}" name="{Q_index}" value="{option}">\n'
-                    template += f'\t\t\t<label for="{id}"> Option {option}\n'
+                    template += f'\t\t\t<label for="{id}" correct="{correct_answer == option}"> Option {option}\n'
                     template += '\t\t\t<ul>\n'
                     while i < len(Lines):
                         line = Lines[i].strip()    
                         if 'Option' in line or line =='':break 
                         template += f'\t\t\t\t<li>{line}</li>\n'
                         i+=1
-
+                    correct_found = correct_found or correct_answer == option
                 i+=1
             template += '\t\t\t</ul>\n\t\t\t</label>\n'
             template += '\t\t</div>'
             # print(template)
+            assert correct_found, f"Correct answer not found for {q_a}"
             
         template += '\n'
         # print(template)
@@ -533,6 +560,8 @@ if shuffle_all:
         already_found = None
         with open(q_a, "r") as f:
             Lines = f.readlines()
+            correct_answer  = Lines[-1].replace("Correct Answer:", "")
+            correct_answer = correct_answer.strip()
             for i,e in enumerate(Lines):
                 if 'Options:' in e:break 
                 if "Following steps have already been taken" in e:
@@ -554,6 +583,7 @@ if shuffle_all:
             option_found = False 
             i+=1
             Q_index = f"P2 : Q{file_index}"
+            correct_found = False 
             while i < len(Lines):
                 line = Lines[i].strip()
                 if 'Select the correct' in line: break 
@@ -566,8 +596,9 @@ if shuffle_all:
                     option = line.replace(".", "")
                     id = f"q2:{file_index}{option}"
                     template += f'\t\t\t\t<input type="radio" id="{id}" name="{Q_index}" value="{option}">\n'
-                    template += f'\t\t\t\t<label for="{id}"> Option {option}\n'
-                    template += '\t\t\t\t\t<ul>\n'
+                    template += f'\t\t\t\t<label for="{id}" correct="{correct_answer == option}"> Option {option}\n'
+                    template += '\t\t\t\t\t<ul>\n'                    
+                    correct_found = correct_found or correct_answer == option
                     
                 else:
                     option_found = True 
@@ -577,6 +608,8 @@ if shuffle_all:
             template += '\t\t\t\t\t</ul>\n\t\t\t\t</label>\n'
             template += '\t\t\t</div>'
             # print(template)
+            assert "Correct Answer:" in Lines[-1]
+            assert correct_found, f"Correct answer not found for {q_a}"
         
         template += '\n'
         # print(template)
@@ -615,6 +648,14 @@ if robo_all:
         already_found = None
         with open(q_a, "r") as f:
             Lines = f.readlines()
+            correct_answer_line  = Lines[-1]
+            if correct_answer_line == '\n':
+                correct_answer_line  = Lines[-2]
+            
+            correct_answer = correct_answer_line.split("correct answer is")[-1]
+            correct_answer = correct_answer.strip()
+            correct_answer = correct_answer.replace(".", "")
+            assert "correct answer is" in correct_answer_line, f"{correct_answer_line}"
             for i,e in enumerate(Lines):
                 e = e.strip()
                 if e == '':continue 
@@ -641,6 +682,7 @@ if robo_all:
             assert already_found == True 
             Q_index = f"P3 : Q{option_counter}"
             # option_mapper = {'A':1, 'B':2, 'C':3, 'D':4}
+            correct_found = False 
             while i < len(Lines):
                 line = Lines[i].strip()
                 if line == '':
@@ -654,9 +696,11 @@ if robo_all:
                 if not first_option:
                     template += f'\t\t\t\t\t</ul>\n'
 
+                correct_found = correct_found or correct_answer == option
+
                 id = f"q3:{option_counter}{option}"
                 template += f'\t\t\t\t<input type="radio" id="{id}" name="{Q_index}" value="{option}">\n'
-                template += f'\t\t\t\t<label for="{id}"> Option {option}\n'
+                template += f'\t\t\t\t<label for="{id}" correct="{correct_answer == option}"> Option {option}\n'
                 template += f'\t\t\t\t\t<ul>\n'
                 template += f'\t\t\t\t\t\t<li>{step_n}</li>\n'
                 first_option = False 
@@ -665,14 +709,15 @@ if robo_all:
             template += '\t\t\t\t\t</ul>\n\t\t\t\t</label>\n'
             template += '\t\t\t</div>'
             template += '\n'
+            
+            assert correct_found, f"Correct answer not found for {q_a}"
+                    
             # print(template)
     template += '\t</div>'      
     with open('html_code_for_robo_all', "w") as f:
         f.write(template)
     
 
-
-# cd ~/Downloads/Submission/"CosPlan (Shresth) CVPR'26"
-# cd cos_plan/Forms/
-# python process.py            
+# cd ~/cos_plan/Forms/
+# python process.py         
 

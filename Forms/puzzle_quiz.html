@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puzzle Sampler — 4 Puzzles</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#ffffff; --border:#e4e7ee; --text:#1f2430;
+    --muted:#6b7280; --accent:#4f46e5; --accent-soft:#eef0fe;
+    --green:#16a34a; --green-soft:#e9f9ee;
+    --red:#dc2626; --red-soft:#fdecec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.55;
+    padding:0 0 60px;
+  }
+
+  header{
+    background:var(--card); border-bottom:1px solid var(--border);
+    padding:22px 20px; text-align:center;
+  }
+  header h1{font-size:1.4rem; margin-bottom:6px;}
+  header p{color:var(--muted); font-size:.9rem; max-width:640px; margin:0 auto;}
+
+  nav.tabs{
+    display:flex; gap:8px; justify-content:center; flex-wrap:wrap;
+    max-width:900px; margin:18px auto 0; padding:0 20px;
+  }
+  .tab-btn{
+    border:1px solid var(--border); background:var(--card); color:var(--muted);
+    padding:9px 18px; border-radius:999px; cursor:pointer; font-size:.86rem;
+    font-weight:600; transition:.15s;
+  }
+  .tab-btn:hover{border-color:var(--accent); color:var(--accent);}
+  .tab-btn.active{background:var(--accent); border-color:var(--accent); color:#fff;}
+
+  main{max-width:780px; margin:26px auto; padding:0 20px;}
+  .puzzle{display:none;}
+  .puzzle.active{display:block;}
+
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:24px; box-shadow:0 1px 3px rgba(20,20,40,.04);
+  }
+
+  .card-top{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px;}
+  .badge{
+    display:inline-block; font-size:.75rem; font-weight:700; letter-spacing:.02em;
+    color:var(--accent); background:var(--accent-soft); padding:4px 12px;
+    border-radius:999px; text-transform:uppercase;
+  }
+  .reroll-btn{
+    border:1px solid var(--border); background:#fff; color:var(--accent);
+    padding:7px 14px; border-radius:999px; cursor:pointer; font-size:.8rem;
+    font-weight:700; transition:.15s;
+  }
+  .reroll-btn:hover{background:var(--accent-soft); border-color:var(--accent);}
+
+  .qid{font-size:.72rem; color:var(--muted); margin-bottom:10px;}
+
+  .img-wrap{
+    border:1px solid var(--border); border-radius:12px; overflow:hidden;
+    background:#fafbfe; margin-bottom:16px; display:flex; align-items:center;
+    justify-content:center; min-height:120px;
+  }
+  .img-wrap img{max-width:100%; max-height:420px; display:block;}
+  .img-note{
+    font-size:.72rem; color:var(--muted); text-align:center; padding:10px;
+  }
+
+  .instructions{font-size:.86rem; color:var(--muted); margin-bottom:14px; white-space:pre-line;}
+
+  .fixed-steps{
+    background:var(--red-soft); border-left:4px solid var(--red); border-radius:8px;
+    padding:12px 16px; margin-bottom:18px; font-size:.85rem;
+  }
+  .fixed-steps p{color:var(--red); font-weight:700; margin-bottom:6px;}
+  .fixed-steps li{margin-left:18px; color:#7f1d1d;}
+
+  .prompt{font-size:.95rem; font-weight:600; margin-bottom:14px;}
+
+  .options{display:grid; gap:10px;}
+  .option{
+    display:block; border:1.5px solid var(--border); border-radius:12px;
+    padding:14px 16px 14px 44px; cursor:pointer; position:relative;
+    background:#fff; transition:.15s; font-size:.87rem;
+  }
+  .option:hover{border-color:var(--accent);}
+  .option input{
+    position:absolute; left:16px; top:17px; width:16px; height:16px;
+    accent-color:var(--accent); cursor:pointer;
+  }
+  .opt-label{font-weight:700; color:var(--accent); display:block; margin-bottom:6px;}
+  .option ul, .option ol{margin:4px 0 0 18px;}
+  .option li{margin:2px 0;}
+
+  .option.answer-correct{background:var(--green-soft) !important; border-color:var(--green) !important;}
+  .option.answer-correct .opt-label{color:var(--green);}
+  .option.answer-wrong{background:var(--red-soft) !important; border-color:var(--red) !important;}
+  .option.answer-wrong .opt-label{color:var(--red);}
+
+  .result-tag{
+    display:none; margin-top:16px; padding:10px 14px; border-radius:10px;
+    font-size:.85rem; font-weight:700;
+  }
+  .result-tag.show{display:block;}
+  .result-tag.correct{background:var(--green-soft); color:var(--green);}
+  .result-tag.wrong{background:var(--red-soft); color:var(--red);}
+
+  footer{text-align:center; color:var(--muted); font-size:.78rem; margin-top:30px;}
+
+  /* Loader / fallback overlay */
+  .overlay{position:fixed; inset:0; background:rgba(15,23,42,.55); z-index:100;
+           display:flex; align-items:center; justify-content:center; padding:20px;}
+  .overlay[hidden]{display:none;}
+  .overlay-card{background:var(--card); border-radius:16px; padding:26px;
+                max-width:560px; width:100%; max-height:85vh; overflow:auto;}
+  .overlay-card h2{font-size:1.1rem; margin-bottom:8px;}
+  .overlay-card p{font-size:.85rem; color:var(--muted); margin-bottom:14px;}
+  .file-row{display:flex; align-items:center; justify-content:space-between; gap:10px;
+             border:1px solid var(--border); border-radius:10px; padding:10px 12px; margin-bottom:10px;}
+  .file-row .fname{font-size:.82rem; font-weight:600;}
+  .file-row .fstatus{font-size:.75rem; font-weight:700;}
+  .file-row .fstatus.ok{color:var(--green);}
+  .file-row .fstatus.pending{color:var(--muted);}
+  .file-row input[type=file]{font-size:.78rem; max-width:180px;}
+  .hint{font-size:.75rem; color:var(--muted); margin-top:10px;}
+  .hint code{background:var(--bg); padding:2px 5px; border-radius:4px;}
+
+  .center-msg{text-align:center; color:var(--muted); font-size:.85rem; padding:40px 0;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Puzzle Sampler</h1>
+  <p>A randomly sampled question from each puzzle type, pulled live from the source files. Pick an option to instantly see if it's correct — green marks the right answer, red marks a wrong pick. No submit button needed.</p>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab-btn active" data-target="p-block">🧱 Blocks</button>
+  <button class="tab-btn" data-target="p-shuffle">🧩 Shuffle</button>
+  <button class="tab-btn" data-target="p-robo">🤖 Robot</button>
+  <button class="tab-btn" data-target="p-maze">🧭 Maze</button>
+</nav>
+
+<main>
+  <div class="puzzle active" id="p-block"><div class="card"><p class="center-msg">Loading…</p></div></div>
+  <div class="puzzle" id="p-shuffle"><div class="card"><p class="center-msg">Loading…</p></div></div>
+  <div class="puzzle" id="p-robo"><div class="card"><p class="center-msg">Loading…</p></div></div>
+  <div class="puzzle" id="p-maze"><div class="card"><p class="center-msg">Loading…</p></div></div>
+</main>
+
+<footer>Each tab pulls a fresh random question from its source file. Use "New random question" to resample.</footer>
+
+<!-- Fallback loader for file:// pages where fetch() is blocked by the browser -->
+<div class="overlay" id="loader" hidden>
+  <div class="overlay-card">
+    <h2>Load puzzle source files</h2>
+    <p>This page samples questions live from the four source files below. Your browser blocked
+       automatic loading (this happens when opening the file directly instead of via a server).
+       Select each file manually to continue.</p>
+    <div id="file-rows"></div>
+    <p class="hint">Tip: to avoid this step, serve the folder instead of opening the file directly —
+       e.g. run <code>python -m http.server</code> in the folder containing this file and the four
+       <code>html_code_for_*.html</code> files, then open it at <code>http://localhost:8000/</code>.</p>
+  </div>
+</div>
+
+<script>
+/* ================================================================
+   CONFIG — source files to sample questions from (not hardcoded)
+   ================================================================ */
+const SOURCES = {
+  block:   { file: 'html_code_for_block_all.html',  cls: 'question_block',   label: '🧱 Blocks',  target: 'p-block'   },
+  shuffle: { file: 'html_code_for_shuffle_all.html', cls: 'question_shuffle', label: '🧩 Shuffle', target: 'p-shuffle' },
+  robo:    { file: 'html_code_for_robo_all.html',    cls: 'question_robo',    label: '🤖 Robot',   target: 'p-robo'    },
+  maze:    { file: 'html_code_for_maze.html',        cls: 'question_maze',   label: '🧭 Maze',    target: 'p-maze'    }
+};
+
+/* Parsed question pools, keyed by type */
+const POOLS = { block: [], shuffle: [], robo: [], maze: [] };
+
+/* ================================================================
+   PARSER — pulls question blocks out of the raw source HTML text
+   (regex-based: several source files contain unclosed <label> tags
+   that would otherwise confuse a DOM parser)
+   ================================================================ */
+function stripTags(s){
+  return s
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .split('\n').map(l => l.trim()).filter(Boolean).join('\n')
+    .trim();
+}
+
+function parseBlock(block){
+  const imgMatch = block.match(/<img src='([^']+)'/);
+  if(!imgMatch) return null;
+  const imgSrc = imgMatch[1];
+
+  const idMatch = block.match(/\(Q\d[^)]*\)/);
+  const qid = idMatch ? idMatch[0].replace(/[()]/g,'') : '';
+
+  const instrMatch = block.match(/<p style="font-style: italic;">([\s\S]*?)<\/p>/);
+  const instruction = instrMatch ? stripTags(instrMatch[1]) : '';
+
+  let fixedSteps = [];
+  const adIdx = block.indexOf('class="already_done"');
+  if(adIdx !== -1){
+    const ulMatch = block.slice(adIdx).match(/<ul>([\s\S]*?)<\/ul>/);
+    if(ulMatch){
+      /* split rather than paired-match: some source files leave the last
+         <li> in this list unclosed, which a matched-pair regex would drop */
+      fixedSteps = ulMatch[1].split(/<li[^>]*>/).map(s => stripTags(s)).filter(Boolean);
+    }
+  }
+
+  const optRe = /<input type="radio"[^>]*value="([A-D])"[^>]*>\s*<label[^>]*correct="(True|False)"[^>]*>([\s\S]*?)(?=<input type="radio"|$)/g;
+  const options = [];
+  let om;
+  while((om = optRe.exec(block)) !== null){
+    let content = om[3];
+    content = content.replace(/<\/label>[\s\S]*$/i, '');
+    content = content.replace(/^\s*Option\s*[A-D]\s*/i, '').trim();
+    options.push({ value: om[1], correct: om[2] === 'True', html: content });
+  }
+  if(options.length < 2) return null;
+
+  return { qid, imgSrc, instruction, fixedSteps, options };
+}
+
+function parseQuestions(html, typeClass){
+  const blocks = [];
+  const re = new RegExp('<div class="' + typeClass + '">([\\s\\S]*?)(?=<div class="' + typeClass + '">|$)', 'g');
+  let m;
+  while((m = re.exec(html)) !== null) blocks.push(m[1]);
+  return blocks.map(parseBlock).filter(Boolean);
+}
+
+/* ================================================================
+   RENDERING
+   ================================================================ */
+function el(tag, cls, text){
+  const e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(text != null) e.textContent = text;
+  return e;
+}
+
+function renderQuestion(key, q){
+  const info = SOURCES[key];
+  const container = document.querySelector('#' + info.target + ' .card');
+  container.innerHTML = '';
+
+  const top = el('div','card-top');
+  top.appendChild(el('span','badge',info.label.replace(/^\S+\s/,'')));
+  const rerollBtn = el('button','reroll-btn','🎲 New random question');
+  rerollBtn.type = 'button';
+  rerollBtn.addEventListener('click', () => sample(key));
+  top.appendChild(rerollBtn);
+  container.appendChild(top);
+
+  if(q.qid) container.appendChild(el('div','qid','Question ' + q.qid));
+
+  const imgWrap = el('div','img-wrap');
+  const img = document.createElement('img');
+  img.src = q.imgSrc;
+  img.alt = 'puzzle image';
+  img.loading = 'lazy';
+  img.onerror = () => imgWrap.replaceWith(el('div','img-note','Image not found: ' + q.imgSrc + ' — place the image folders next to this file to see it.'));
+  imgWrap.appendChild(img);
+  container.appendChild(imgWrap);
+
+  if(q.instruction) container.appendChild(el('p','instructions', q.instruction));
+
+  if(q.fixedSteps.length){
+    const fx = el('div','fixed-steps');
+    fx.appendChild(el('p', null, 'Fixed steps already performed (non-negotiable):'));
+    const ul = el('ul');
+    q.fixedSteps.forEach(s => ul.appendChild(el('li', null, s)));
+    fx.appendChild(ul);
+    container.appendChild(fx);
+  }
+
+  container.appendChild(el('p','prompt','Which option correctly completes the sequence?'));
+
+  const opts = el('div','options');
+  q.options.forEach(o => {
+    const label = el('label','option');
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = key + '-active-question';
+    input.value = o.value;
+    input.dataset.correct = o.correct ? 'true' : 'false';
+    label.appendChild(input);
+    label.appendChild(el('span','opt-label','Option ' + o.value));
+    const rest = document.createElement('div');
+    rest.innerHTML = o.html;
+    label.appendChild(rest);
+    opts.appendChild(label);
+  });
+  container.appendChild(opts);
+
+  const resultTag = el('div','result-tag');
+  container.appendChild(resultTag);
+
+  opts.addEventListener('change', e => {
+    if(e.target.type !== 'radio') return;
+    opts.querySelectorAll('.option').forEach(o => o.classList.remove('answer-correct','answer-wrong'));
+    const correctOption = [...opts.querySelectorAll('.option')].find(o => o.querySelector('input').dataset.correct === 'true');
+    const selectedOption = e.target.closest('.option');
+    const wasCorrect = e.target.dataset.correct === 'true';
+    correctOption.classList.add('answer-correct');
+    if(!wasCorrect) selectedOption.classList.add('answer-wrong');
+    resultTag.classList.remove('correct','wrong');
+    resultTag.classList.add('show', wasCorrect ? 'correct' : 'wrong');
+    resultTag.textContent = wasCorrect ? '✓ Correct!' : '✗ Not quite — the correct answer is highlighted in green above.';
+  });
+}
+
+function sample(key){
+  const pool = POOLS[key];
+  if(!pool.length) return;
+  const q = pool[Math.floor(Math.random() * pool.length)];
+  renderQuestion(key, q);
+}
+
+/* ================================================================
+   TABS
+   ================================================================ */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.puzzle').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.target).classList.add('active');
+  });
+});
+
+/* ================================================================
+   LOADING — fetch each source file; fall back to manual file picks
+   if the browser blocks fetch() (e.g. opened as a file:// page)
+   ================================================================ */
+function showError(key, msg){
+  const container = document.querySelector('#' + SOURCES[key].target + ' .card');
+  container.innerHTML = '';
+  container.appendChild(el('p','center-msg', msg));
+}
+
+function ingest(key, html){
+  POOLS[key] = parseQuestions(html, SOURCES[key].cls);
+  if(!POOLS[key].length){
+    showError(key, 'Loaded ' + SOURCES[key].file + ' but found 0 questions — check the file content.');
+    return;
+  }
+  sample(key);
+}
+
+function buildLoader(missingKeys){
+  const rows = document.getElementById('file-rows');
+  rows.innerHTML = '';
+  missingKeys.forEach(key => {
+    const info = SOURCES[key];
+    const row = el('div','file-row');
+    const left = el('div');
+    left.appendChild(el('div','fname', info.label + ' — ' + info.file));
+    const status = el('div','fstatus pending','waiting for file…');
+    left.appendChild(status);
+    row.appendChild(left);
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.html,.htm,.txt';
+    input.addEventListener('change', async e => {
+      const f = e.target.files[0];
+      if(!f) return;
+      const text = await f.text();
+      ingest(key, text);
+      status.textContent = 'loaded ✓';
+      status.classList.remove('pending');
+      status.classList.add('ok');
+      if(missingKeys.every(k => POOLS[k].length)){
+        document.getElementById('loader').hidden = true;
+      }
+    });
+    row.appendChild(input);
+    rows.appendChild(row);
+  });
+  document.getElementById('loader').hidden = false;
+}
+
+(async function boot(){
+  const keys = Object.keys(SOURCES);
+  const missing = [];
+  await Promise.all(keys.map(async key => {
+    try{
+      const r = await fetch(SOURCES[key].file, { cache: 'no-store' });
+      if(!r.ok) throw new Error(String(r.status));
+      ingest(key, await r.text());
+    }catch(err){
+      missing.push(key);
+      showError(key, 'Couldn\'t auto-load ' + SOURCES[key].file + '.');
+    }
+  }));
+  if(missing.length) buildLoader(missing);
+})();
+</script>
+</body>
+</html>
